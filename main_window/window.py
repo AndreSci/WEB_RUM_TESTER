@@ -118,17 +118,15 @@ class MainWindow(QtWidgets.QMainWindow):
                     self.ui.tab_list_employees.setItem(index, 17, QtWidgets.QTableWidgetItem(str(it['FFavorite'])))
 
                     self.ui.tab_list_employees.setItem(index, 18, QtWidgets.QTableWidgetItem(str(it['FGALState'])))
-                    self.ui.tab_list_employees.setItem(index, 19, QtWidgets.QTableWidgetItem(str(it['FCreateDate'])))
+
+                    self.ui.tab_list_employees.setItem(index, 19, QtWidgets.QTableWidgetItem(str(it['FAutobalance'])))
                     self.ui.tab_list_employees.setItem(index, 20, QtWidgets.
-                                                       QTableWidgetItem(str(it['FLastDecreaseDate'])))
-                    self.ui.tab_list_employees.setItem(index, 21, QtWidgets.QTableWidgetItem(str(it['FAutobalance'])))
-                    self.ui.tab_list_employees.setItem(index, 22, QtWidgets.
                                                        QTableWidgetItem(str(it['FCompanyAccount'])))
-                    self.ui.tab_list_employees.setItem(index, 23, QtWidgets.
+                    self.ui.tab_list_employees.setItem(index, 21, QtWidgets.
                                                        QTableWidgetItem(str(it['FPersonalAccount'])))
-                    self.ui.tab_list_employees.setItem(index, 24, QtWidgets.
+                    self.ui.tab_list_employees.setItem(index, 22, QtWidgets.
                                                        QTableWidgetItem(str(it['FPresentAccount'])))
-                    self.ui.tab_list_employees.setItem(index, 25, QtWidgets.QTableWidgetItem(str(it['FVIPState'])))
+                    self.ui.tab_list_employees.setItem(index, 23, QtWidgets.QTableWidgetItem(str(it['FVIPState'])))
 
                     index += 1
             except Exception as ex:
@@ -200,7 +198,6 @@ class MainWindow(QtWidgets.QMainWindow):
             "FLastName": self.ui.text_FLastName_DoRequestReplaceCard.text(),
             "FMiddleName": self.ui.text_FMiddleName_DoRequestReplaceCard.text(),
 
-            "FCarNumber": self.ui.text_FCarNumber_DoRequestReplaceCard.text(),
             "FApacsID": self.ui.text_FApacsID_DoRequestReplaceCard.text()
         }
 
