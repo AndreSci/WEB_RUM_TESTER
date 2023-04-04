@@ -213,3 +213,24 @@ class TestRequestRum:
             ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
 
         return ret_value
+
+    def do_request_block_card_holder(self, json_data: dict):
+        """ Запрос на блокировку сотрудника """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/DoRequestBlockCardHolder"
+
+        try:
+            result = requests.get(url, json=json_data, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value

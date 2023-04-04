@@ -38,6 +38,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bt_GetRequestCreateCardHolder.clicked.connect(self.get_request_create_card_holder)
         self.ui.bt_openFile_jpg.clicked.connect(self.open_file_in_folder)
         self.ui.bt_DoRequestReplaceCard.clicked.connect(self.do_request_replace_card)
+        self.ui.bt_DoRequestBlockCardHolder.clicked.connect(self.do_request_block_card_holder)
 
         self.set_ini = settings_ini
 
@@ -169,6 +170,17 @@ class MainWindow(QtWidgets.QMainWindow):
 
         print(result)
         self.ui.browser_GetRequestCreateCardHolder.setText(str(json.dumps(result, sort_keys=True,
+                                                                            indent=4, ensure_ascii=False)))
+
+    def do_request_block_card_holder(self):
+        json_data = {
+            "inn": self.ui.text_inn_DoRequestBlockCardHolder.text(),
+            "user_id": self.ui.text_user_id_DoRequestBlockCardHolder.text(),
+            "FApacsID": self.ui.text_FApacsID_DoRequestBlockCardHolder.text()
+        }
+        result = self.request_api.do_request_block_card_holder(json_data)
+
+        self.ui.browser_DoRequestBlockCardHolder.setText(str(json.dumps(result, sort_keys=True,
                                                                             indent=4, ensure_ascii=False)))
 
     def open_file_in_folder(self):
