@@ -7,6 +7,8 @@ class TestRequestRum:
         self.host = host
         self.port = port
 
+    # ФАЗА 1
+    # done
     def request_employees(self, guid):
         """ Получаем список сотрудников по GUID компании """
 
@@ -28,6 +30,7 @@ class TestRequestRum:
 
         return ret_value
 
+    # done
     def add_account(self, guid, units):
         """ Переместить п.е. от компании к сотруднику """
 
@@ -49,6 +52,7 @@ class TestRequestRum:
 
         return ret_value
 
+    # done
     def remove_account(self, guid, units):
         """ Переместить п.е. от сотрудника к компании """
 
@@ -69,52 +73,13 @@ class TestRequestRum:
 
         return ret_value
 
-    def do_request_create_card_holder(self, json_data: dict):
-        """ Создает сотрудника """
-
-        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
-
-        url = f"http://{self.host}:{self.port}/DoRequestCreateCardHolder"
-
-        try:
-            result = requests.get(url, json=json_data, timeout=5)
-
-            if result.status_code == 200:
-                ret_value = result.json()
-            else:
-                ret_value['DESC'] = f"Статус код: {result.status_code}"
-
-        except Exception as ex:
-            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
-
-        return ret_value
-
+    #
     def set_contacts(self, guid, phone, email):
         """ Переместить п.е. от сотрудника к компании """
 
         ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
 
         url = f"http://{self.host}:{self.port}/SetContacts?guid={guid}&phone={phone}&email={email}"
-
-        try:
-            result = requests.get(url, timeout=5)
-
-            if result.status_code == 200:
-                ret_value = result.json()
-            else:
-                ret_value['DESC'] = f"Статус код: {result.status_code}"
-
-        except Exception as ex:
-            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
-
-        return ret_value
-
-    def get_photo(self, photo_name):
-        """ Получить фотографию """
-
-        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
-
-        url = f"http://{self.host}:{self.port}/GetPhoto?photo_name={photo_name}"
 
         try:
             result = requests.get(url, timeout=5)
@@ -170,8 +135,30 @@ class TestRequestRum:
 
         return ret_value
 
-    # get_request_create_card_holder
+    # ФАЗА 2
 
+    # done
+    def do_request_create_card_holder(self, json_data: dict):
+        """ Создает сотрудника """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/DoRequestCreateCardHolder"
+
+        try:
+            result = requests.get(url, json=json_data, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    # done
     def get_request_create_card_holder(self, json_data: dict):
         """ Получить список заявок """
 
@@ -193,6 +180,7 @@ class TestRequestRum:
 
         return ret_value
 
+    # done
     def get_request_replace_card_holder(self, json_data: dict):
         """ Запрос на перевыпуск """
 
@@ -214,6 +202,7 @@ class TestRequestRum:
 
         return ret_value
 
+    # done
     def do_request_block_card_holder(self, json_data: dict):
         """ Запрос на блокировку сотрудника """
 
@@ -227,6 +216,26 @@ class TestRequestRum:
             if result.status_code == 200:
                 ret_value = result.json()
 
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    def get_photo(self, photo_name):
+        """ Получить фотографию """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/GetPhoto?photo_name={photo_name}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 

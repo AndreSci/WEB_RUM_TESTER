@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import requests
 import sys
 import json
+import ast
 
 from misc.logger import Logger
 from misc.utility import SettingsIni
@@ -39,6 +40,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bt_openFile_jpg.clicked.connect(self.open_file_in_folder)
         self.ui.bt_DoRequestReplaceCard.clicked.connect(self.do_request_replace_card)
         self.ui.bt_DoRequestBlockCardHolder.clicked.connect(self.do_request_block_card_holder)
+
+        self.ui.bt_GetPhoto.clicked.connect(self.get_photo)
 
         self.set_ini = settings_ini
 
@@ -218,6 +221,41 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.browser_DoRequestReplaceCard.clear()
         self.ui.browser_DoRequestReplaceCard.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
+
+    def get_photo(self):
+
+        img_name = self.ui.text_GetPhoto.text()
+
+        result = self.request_api.get_photo(img_name)
+
+        if result['RESULT'] == 'SUCCESS':
+            result = self.__get_photo(result)
+
+        self.ui.browser_DoRequestReplaceCard.clear()
+
+        self.ui.browser_DoRequestReplaceCard.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def __get_photo(self, json_data: dict):
+
+        ret_value = {"RESULT": "ERROR", "DESC": '', "DATA": ''}
+
+        try:
+            data = ast.literal_eval(b''.join(json_data['DATA']))
+
+            ba = QtCore.QByteArray.fromBase64(data)
+            pixmap = QtGui.QPixmap()
+            if pixmap.loadFromData(ba, "JPG"):
+                self.ui.label_GetPhoto_pixmap.setPixmap(pixmap)
+                ret_value['RESULT'] = "SUCCESS"
+            else:
+                ret_value['DESC'] = "Не удалось выгрузить img64: pixmap.loadFromData()"
+
+        except SyntaxError as sx:
+            ret_value['DESC'] = f'SyntaxError: вызвала функция __get_photo.' \
+                                f' Не удалось перестроить из запроса img64: {sx}'
+
+        return ret_value
 
     def exit_def(self):
         sys.exit()
