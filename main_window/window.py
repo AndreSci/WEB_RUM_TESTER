@@ -231,9 +231,9 @@ class MainWindow(QtWidgets.QMainWindow):
         if result['RESULT'] == 'SUCCESS':
             result = self.__get_photo(result)
 
-        self.ui.browser_DoRequestReplaceCard.clear()
+        self.ui.browser_GetPhoto.clear()
 
-        self.ui.browser_DoRequestReplaceCard.setText(str(json.dumps(result, sort_keys=True,
+        self.ui.browser_GetPhoto.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
     def __get_photo(self, json_data: dict):
@@ -241,12 +241,17 @@ class MainWindow(QtWidgets.QMainWindow):
         ret_value = {"RESULT": "ERROR", "DESC": '', "DATA": ''}
 
         try:
-            data = ast.literal_eval(b''.join(json_data['DATA']))
+            import base64
+            decoded_data = base64.b64decode(json_data['DATA']['img64'])
 
-            ba = QtCore.QByteArray.fromBase64(data)
+            # Метод преобразования строки в байт код
+            # data = ast.literal_eval(json_data['DATA']['img64'])
+            # ba = QtCore.QByteArray.fromBase64(data)
+
             pixmap = QtGui.QPixmap()
-            if pixmap.loadFromData(ba, "JPG"):
-                self.ui.label_GetPhoto_pixmap.setPixmap(pixmap)
+            if pixmap.loadFromData(decoded_data, "JPG"):
+                pixmap_resized = pixmap.scaled(345, 500, QtCore.Qt.KeepAspectRatio)
+                self.ui.label_GetPhoto_pixmap.setPixmap(pixmap_resized)
                 ret_value['RESULT'] = "SUCCESS"
             else:
                 ret_value['DESC'] = "Не удалось выгрузить img64: pixmap.loadFromData()"
@@ -254,6 +259,11 @@ class MainWindow(QtWidgets.QMainWindow):
         except SyntaxError as sx:
             ret_value['DESC'] = f'SyntaxError: вызвала функция __get_photo.' \
                                 f' Не удалось перестроить из запроса img64: {sx}'
+            print(f"Ошибка: {sx}")
+        except Exception as ex:
+            ret_value['DESC'] = f'SyntaxError: вызвала функция __get_photo.' \
+                                f' Не удалось перестроить из запроса img64: {ex}'
+            print(f"Ошибка: {ex}")
 
         return ret_value
 

@@ -227,7 +227,7 @@ class TestRequestRum:
     def get_photo(self, photo_name):
         """ Получить фотографию """
 
-        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': ''}
 
         url = f"http://{self.host}:{self.port}/GetPhoto?photo_name={photo_name}"
 
