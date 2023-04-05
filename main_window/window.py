@@ -164,6 +164,46 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.browser_RemoveAccount.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
+    def __get_request_create_card_holder(self, list_card_holders: list):
+        """ Функция заполнения таблицы """
+        ret_value = {'RESULT': True, 'DESC': ''}
+
+        self.ui.tab_GetRequestCreateCardHolder.setRowCount(0)
+
+        if list_card_holders:
+            self.ui.tab_GetRequestCreateCardHolder.setRowCount(len(list_card_holders))
+
+            index = 0
+
+            try:
+                for it in list_card_holders:
+
+                    self.ui.tab_GetRequestCreateCardHolder.setItem(index, 0,
+                                                                   QtWidgets.QTableWidgetItem(str(it['FID'])))
+                    self.ui.tab_GetRequestCreateCardHolder.setItem(index, 1,
+                                                                   QtWidgets.QTableWidgetItem(str(it['FlastName'])))
+                    self.ui.tab_GetRequestCreateCardHolder.setItem(index, 2,
+                                                                   QtWidgets.QTableWidgetItem(str(it['FFirstName'])))
+                    self.ui.tab_GetRequestCreateCardHolder.setItem(index, 3,
+                                                                   QtWidgets.QTableWidgetItem(str(it['FMiddleName'])))
+                    self.ui.tab_GetRequestCreateCardHolder.setItem(index, 4,
+                                                                   QtWidgets.QTableWidgetItem(str(it['FTime'])))
+                    self.ui.tab_GetRequestCreateCardHolder.setItem(index, 5,
+                                                                   QtWidgets.QTableWidgetItem(str(it['Status'])))
+                    self.ui.tab_GetRequestCreateCardHolder.setItem(index, 6,
+                                                                   QtWidgets.QTableWidgetItem(str(it['FActivity'])))
+
+                    index += 1
+            except Exception as ex:
+                msg = f"Исключение вызвало: {ex}"
+                print(msg)
+                ret_value['DESC'] = msg
+                ret_value['RESULT'] = False
+
+            self.ui.tab_GetRequestCreateCardHolder.resizeColumnsToContents()
+
+        return ret_value
+
     def get_request_create_card_holder(self):
         json_data = {
             "inn": self.ui.text_GerRequestCreateCardHolder_inn.text(),
@@ -171,15 +211,22 @@ class MainWindow(QtWidgets.QMainWindow):
         }
         result = self.request_api.get_request_create_card_holder(json_data)
 
-        print(result)
-        self.ui.browser_GetRequestCreateCardHolder.setText(str(json.dumps(result, sort_keys=True,
-                                                                            indent=4, ensure_ascii=False)))
+        tab_res = self.__get_request_create_card_holder(result.get('DATA'))
+        tab_res['HEADER'] = result['HEADER']
+
+        if tab_res['RESULT']:
+            self.ui.browser_GetRequestCreateCardHolder.setText(str(json.dumps(result, sort_keys=True,
+                                                                                indent=4, ensure_ascii=False)))
+        else:
+            self.ui.browser_GetRequestCreateCardHolder.setText(str(json.dumps(tab_res, sort_keys=True,
+                                                                                indent=4, ensure_ascii=False)))
 
     def do_request_block_card_holder(self):
         json_data = {
             "inn": self.ui.text_inn_DoRequestBlockCardHolder.text(),
             "user_id": self.ui.text_user_id_DoRequestBlockCardHolder.text(),
-            "FApacsID": self.ui.text_FApacsID_DoRequestBlockCardHolder.text()
+            "FApacsID": self.ui.text_FApacsID_DoRequestBlockCardHolder.text(),
+            "desc": self.ui.text_desc_DoRequestBlockCardHolder.toPlainText()
         }
         result = self.request_api.do_request_block_card_holder(json_data)
 
@@ -227,9 +274,11 @@ class MainWindow(QtWidgets.QMainWindow):
         img_name = self.ui.text_GetPhoto.text()
 
         result = self.request_api.get_photo(img_name)
+        header = result['HEADER']
 
         if result['RESULT'] == 'SUCCESS':
             result = self.__get_photo(result)
+            result['HEADER'] = header
 
         self.ui.browser_GetPhoto.clear()
 
@@ -240,6 +289,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         ret_value = {"RESULT": "ERROR", "DESC": '', "DATA": ''}
 
+        pixmap = QtGui.QPixmap()
+
         try:
             import base64
             decoded_data = base64.b64decode(json_data['DATA']['img64'])
@@ -248,7 +299,6 @@ class MainWindow(QtWidgets.QMainWindow):
             # data = ast.literal_eval(json_data['DATA']['img64'])
             # ba = QtCore.QByteArray.fromBase64(data)
 
-            pixmap = QtGui.QPixmap()
             if pixmap.loadFromData(decoded_data, "JPG"):
                 pixmap_resized = pixmap.scaled(345, 500, QtCore.Qt.KeepAspectRatio)
                 self.ui.label_GetPhoto_pixmap.setPixmap(pixmap_resized)

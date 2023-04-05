@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1330, 783)
+        MainWindow.resize(1159, 699)
         MainWindow.setMinimumSize(QtCore.QSize(950, 550))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -131,8 +131,6 @@ class Ui_MainWindow(object):
         self.frame_51.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_51.setObjectName("frame_51")
         self.verticalLayout_38 = QtWidgets.QVBoxLayout(self.frame_51)
-        self.verticalLayout_38.setContentsMargins(1, 1, 1, 1)
-        self.verticalLayout_38.setSpacing(1)
         self.verticalLayout_38.setObjectName("verticalLayout_38")
         self.frame_52 = QtWidgets.QFrame(self.frame_51)
         self.frame_52.setMinimumSize(QtCore.QSize(0, 50))
@@ -195,6 +193,25 @@ class Ui_MainWindow(object):
         self.text_FApacsID_DoRequestBlockCardHolder.setObjectName("text_FApacsID_DoRequestBlockCardHolder")
         self.verticalLayout_45.addWidget(self.text_FApacsID_DoRequestBlockCardHolder)
         self.verticalLayout_38.addWidget(self.frame_56)
+        self.frame_62 = QtWidgets.QFrame(self.frame_51)
+        self.frame_62.setMinimumSize(QtCore.QSize(0, 100))
+        self.frame_62.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.frame_62.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_62.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_62.setObjectName("frame_62")
+        self.verticalLayout_48 = QtWidgets.QVBoxLayout(self.frame_62)
+        self.verticalLayout_48.setContentsMargins(1, 1, 1, 1)
+        self.verticalLayout_48.setSpacing(1)
+        self.verticalLayout_48.setObjectName("verticalLayout_48")
+        self.label_33 = QtWidgets.QLabel(self.frame_62)
+        self.label_33.setMinimumSize(QtCore.QSize(0, 13))
+        self.label_33.setMaximumSize(QtCore.QSize(16777215, 13))
+        self.label_33.setObjectName("label_33")
+        self.verticalLayout_48.addWidget(self.label_33)
+        self.text_desc_DoRequestBlockCardHolder = QtWidgets.QTextEdit(self.frame_62)
+        self.text_desc_DoRequestBlockCardHolder.setObjectName("text_desc_DoRequestBlockCardHolder")
+        self.verticalLayout_48.addWidget(self.text_desc_DoRequestBlockCardHolder)
+        self.verticalLayout_38.addWidget(self.frame_62, 0, QtCore.Qt.AlignTop)
         self.bt_DoRequestBlockCardHolder = QtWidgets.QPushButton(self.frame_51)
         self.bt_DoRequestBlockCardHolder.setMinimumSize(QtCore.QSize(100, 30))
         self.bt_DoRequestBlockCardHolder.setMaximumSize(QtCore.QSize(100, 30))
@@ -559,12 +576,57 @@ class Ui_MainWindow(object):
         self.frame_44.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_44.setObjectName("frame_44")
         self.verticalLayout_36 = QtWidgets.QVBoxLayout(self.frame_44)
-        self.verticalLayout_36.setContentsMargins(1, 1, 1, 1)
-        self.verticalLayout_36.setSpacing(1)
         self.verticalLayout_36.setObjectName("verticalLayout_36")
-        self.browser_GetRequestCreateCardHolder = QtWidgets.QTextBrowser(self.frame_44)
+        self.tabWidget_3 = QtWidgets.QTabWidget(self.frame_44)
+        self.tabWidget_3.setObjectName("tabWidget_3")
+        self.tab_11 = QtWidgets.QWidget()
+        self.tab_11.setObjectName("tab_11")
+        self.horizontalLayout_25 = QtWidgets.QHBoxLayout(self.tab_11)
+        self.horizontalLayout_25.setContentsMargins(1, 1, 1, 1)
+        self.horizontalLayout_25.setSpacing(1)
+        self.horizontalLayout_25.setObjectName("horizontalLayout_25")
+        self.browser_GetRequestCreateCardHolder = QtWidgets.QTextBrowser(self.tab_11)
         self.browser_GetRequestCreateCardHolder.setObjectName("browser_GetRequestCreateCardHolder")
-        self.verticalLayout_36.addWidget(self.browser_GetRequestCreateCardHolder)
+        self.horizontalLayout_25.addWidget(self.browser_GetRequestCreateCardHolder)
+        self.tabWidget_3.addTab(self.tab_11, "")
+        self.tab_12 = QtWidgets.QWidget()
+        self.tab_12.setObjectName("tab_12")
+        self.horizontalLayout_26 = QtWidgets.QHBoxLayout(self.tab_12)
+        self.horizontalLayout_26.setObjectName("horizontalLayout_26")
+        self.tab_GetRequestCreateCardHolder = QtWidgets.QTableWidget(self.tab_12)
+        self.tab_GetRequestCreateCardHolder.setStyleSheet("QHeaderView::section:horizontal\n"
+"{\n"
+"    border: 1px solid rgb(32, 34, 42);\n"
+"    background-color:rgb(53, 53, 53);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+" QScrollBar:vertical {\n"
+"    border: none;\n"
+"    background: rgb(52, 59, 72);\n"
+"    width: 14px;\n"
+"    border-radius: 0px;\n"
+" }")
+        self.tab_GetRequestCreateCardHolder.setObjectName("tab_GetRequestCreateCardHolder")
+        self.tab_GetRequestCreateCardHolder.setColumnCount(7)
+        self.tab_GetRequestCreateCardHolder.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_GetRequestCreateCardHolder.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_GetRequestCreateCardHolder.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_GetRequestCreateCardHolder.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_GetRequestCreateCardHolder.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_GetRequestCreateCardHolder.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_GetRequestCreateCardHolder.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_GetRequestCreateCardHolder.setHorizontalHeaderItem(6, item)
+        self.horizontalLayout_26.addWidget(self.tab_GetRequestCreateCardHolder)
+        self.tabWidget_3.addTab(self.tab_12, "")
+        self.verticalLayout_36.addWidget(self.tabWidget_3)
         self.frame_45 = QtWidgets.QFrame(self.frame_44)
         self.frame_45.setMinimumSize(QtCore.QSize(0, 50))
         self.frame_45.setMaximumSize(QtCore.QSize(16777215, 50))
@@ -1142,8 +1204,9 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
-        self.tabWidget_2.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget_3.setCurrentIndex(0)
+        self.tabWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1151,12 +1214,27 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_32.setText(_translate("MainWindow", "Имя файла из БД"))
         self.bt_GetPhoto.setText(_translate("MainWindow", "Request"))
+        self.browser_GetPhoto.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">12.jpg</p></body></html>"))
         self.label_34.setText(_translate("MainWindow", "GET - GetPhoto"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_10), _translate("MainWindow", "Получить фото"))
         self.label_27.setText(_translate("MainWindow", "user_id"))
         self.label_29.setText(_translate("MainWindow", "inn"))
         self.label_30.setText(_translate("MainWindow", "FApacsID"))
+        self.label_33.setText(_translate("MainWindow", "desc - max(227)"))
         self.bt_DoRequestBlockCardHolder.setText(_translate("MainWindow", "Request"))
+        self.browser_DoRequestBlockCardHolder.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#fffffe;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;inn&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7751216310</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;user_id&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7528</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FApacsID&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 1048035</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">для теста</span></p></body></html>"))
         self.label_35.setText(_translate("MainWindow", "GET -DoRequestBlockCardHolder"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_9), _translate("MainWindow", "Блокировка CardHolder"))
         self.label.setText(_translate("MainWindow", "user_id"))
@@ -1169,12 +1247,51 @@ class Ui_MainWindow(object):
         self.label_8.setText(_translate("MainWindow", "FEmail"))
         self.label_9.setText(_translate("MainWindow", "img64 - path"))
         self.bt_openFile_jpg.setText(_translate("MainWindow", "Open"))
+        self.browser_DoRequestCreatCardHolder.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#fffffe;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;inn&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7751216310</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;user_id&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7528</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\"><br /></span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FFirstName&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: Тест_Имя</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FLastName&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: Тест_Фамилия</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FMiddleName&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: Тест_Отчество</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\"><br /></span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FCarNumber&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: а000аа777</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FPhone&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: &quot;+79661114422</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FEmail&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: email@gmail.com</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">для теста</span></p></body></html>"))
         self.bt_DoRequestCreatCardHolder.setText(_translate("MainWindow", "Request"))
         self.label_10.setText(_translate("MainWindow", "GET - DoRequestCreateCardHolder"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Создать заявку CardHolder"))
         self.label_16.setText(_translate("MainWindow", "user_id"))
         self.label_17.setText(_translate("MainWindow", "inn"))
         self.bt_GetRequestCreateCardHolder.setText(_translate("MainWindow", "Request"))
+        self.browser_GetRequestCreateCardHolder.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#fffffe;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;inn&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7751216310</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;user_id&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7528</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">для теста</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\"><br /></p></body></html>"))
+        self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_11), _translate("MainWindow", "Ответ"))
+        item = self.tab_GetRequestCreateCardHolder.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "FID"))
+        item = self.tab_GetRequestCreateCardHolder.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "FlastName"))
+        item = self.tab_GetRequestCreateCardHolder.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "FFirstName"))
+        item = self.tab_GetRequestCreateCardHolder.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "FMiddleName"))
+        item = self.tab_GetRequestCreateCardHolder.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "FTime"))
+        item = self.tab_GetRequestCreateCardHolder.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "Status"))
+        item = self.tab_GetRequestCreateCardHolder.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "FActivity"))
+        self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_12), _translate("MainWindow", "Таблица"))
         self.label_28.setText(_translate("MainWindow", "GET - GetRequestCreateCardHolder"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("MainWindow", "Список заявок"))
         self.label_18.setText(_translate("MainWindow", "user_id"))
@@ -1184,10 +1301,27 @@ class Ui_MainWindow(object):
         self.label_24.setText(_translate("MainWindow", "FFirstName"))
         self.label_26.setText(_translate("MainWindow", "FMiddleName"))
         self.bt_DoRequestReplaceCard.setText(_translate("MainWindow", "Request"))
+        self.browser_DoRequestReplaceCard.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;inn&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7751216310</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;user_id&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 7528</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FApacsID&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: 1048035</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FLastName&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: text</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FFirstName&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: text</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#ad0002;\">&quot;FMiddleName&quot;</span><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">: text</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace\'; font-size:8pt; color:#000000;\">для теста</span></p></body></html>"))
         self.label_31.setText(_translate("MainWindow", "GET - DoRequestReplaceCard"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("MainWindow", "Перевыпуск CardHolder"))
         self.label_11.setText(_translate("MainWindow", "guid"))
         self.bt_RequestEmployees.setText(_translate("MainWindow", "Request"))
+        self.browser_RequestEmployees.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#ad0002; background-color:#ffffff;\">&quot;guid</span><span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#212121; background-color:#ffffff;\">&quot;:  </span><span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#000000; background-color:#ffffff;\">{A25F685A-AC40-4946-B21A-AC1C5B54C705}</span></p></body></html>"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_7), _translate("MainWindow", "Ответ"))
         item = self.tab_list_employees.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "UID"))
@@ -1243,11 +1377,23 @@ class Ui_MainWindow(object):
         self.label_12.setText(_translate("MainWindow", "guid"))
         self.label_13.setText(_translate("MainWindow", "units  (кол-во парковочных единиц)"))
         self.bt_AddAccount.setText(_translate("MainWindow", "Request"))
+        self.browser_AddAccount.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ad0002;\">&quot;guid</span>&quot;: <span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#003091; background-color:#ffffff;\">{B91F3FDF-B8AF-42AE-98D8-29FDD484E245}</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#ad0002; background-color:#ffffff;\">&quot;units&quot;</span><span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#212121; background-color:#ffffff;\">: 5</span></p></body></html>"))
         self.label_22.setText(_translate("MainWindow", "GET - AddAccount"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Добавить п.е. сотруднику"))
         self.label_14.setText(_translate("MainWindow", "guid"))
         self.label_15.setText(_translate("MainWindow", "units  (кол-во парковочных единиц)"))
         self.bt_RemoveAccount.setText(_translate("MainWindow", "Request"))
+        self.browser_RemoveAccount.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#212121; background-color:#ffffff;\">{B91F3FDF-B8AF-42AE-98D8-29FDD484E245}</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif\'; font-size:8pt; color:#212121; background-color:#ffffff;\">5</span></p></body></html>"))
         self.label_23.setText(_translate("MainWindow", "GET - RemoveAccount"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Забрать п.е. сотрудника"))
 

@@ -1,4 +1,12 @@
 import requests
+import json
+
+
+def convert_header(header) -> str:
+    type(header)
+
+    result = json.dumps(header, sort_keys=True, indent=4, ensure_ascii=False)
+    return result
 
 
 class TestRequestRum:
@@ -21,7 +29,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
-
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -42,8 +50,8 @@ class TestRequestRum:
             result = requests.get(url, timeout=5)
 
             if result.status_code == 200:
-
                 ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -65,6 +73,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -86,6 +95,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -106,6 +116,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -126,7 +137,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
-
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -150,6 +161,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -171,7 +183,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
-
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -193,7 +205,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
-
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -215,7 +227,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
-
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
@@ -236,6 +248,7 @@ class TestRequestRum:
 
             if result.status_code == 200:
                 ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
             else:
                 ret_value['DESC'] = f"Статус код: {result.status_code}"
 
