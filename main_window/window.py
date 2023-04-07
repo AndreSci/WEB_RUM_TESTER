@@ -40,9 +40,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bt_openFile_jpg.clicked.connect(self.open_file_in_folder)
         self.ui.bt_DoRequestReplaceCard.clicked.connect(self.do_request_replace_card)
         self.ui.bt_DoRequestBlockCardHolder.clicked.connect(self.do_request_block_card_holder)
-        self.ui.bt_DoRequestGuest.clicked.connect(self.do_request_guest)
 
         self.ui.bt_GetPhoto.clicked.connect(self.get_photo)
+
+        # step 3
+        self.ui.bt_DoRequestGuest.clicked.connect(self.do_request_guest)
+        self.ui.bt_DoBlockGuest.clicked.connect(self.do_block_guest)
+        self.ui.bt_GetGuestsStatus.clicked.connect(self.get_guests_status)
 
         self.set_ini = settings_ini
 
@@ -332,7 +336,6 @@ class MainWindow(QtWidgets.QMainWindow):
             "FMiddleName": self.ui.text_FMiddleName_DoRequestGuest.text(),
 
             "FCarNumber": self.ui.text_FCarNumber_DoRequestGuest.text(),
-            "FPhone": self.ui.text_FPhone_DoRequestGuest.text(),
             "FEmail": self.ui.text_FEmail.text(),
 
             "FDateFrom": self.ui.text_FDateFrom_DoRequestGuest.text(),
@@ -343,6 +346,33 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.ui.browser_DoRequestGuest.clear()
         self.ui.browser_DoRequestGuest.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def do_block_guest(self):
+
+        json_data = {
+            "inn": self.ui.text_inn_DoBlockGuest.text(),
+            "user_id": self.ui.text_user_id_DoBlockGuest.text(),
+            "id_remote": self.ui.text_id_remote_DoBlockGuest.text()
+        }
+
+        result = self.request_api.do_block_guest(json_data)
+
+        self.ui.browser_DoBlockGuest.clear()
+        self.ui.browser_DoBlockGuest.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def get_guests_status(self):
+
+        json_data = {
+            "inn": self.ui.text_inn_GetGuestsStatus.text(),
+            "user_id": self.ui.text_user_id_GetGuestsStatus.text()
+        }
+
+        result = self.request_api.get_guests_status(json_data)
+
+        self.ui.browser_GetGuestsStatus.clear()
+        self.ui.browser_GetGuestsStatus.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
     def exit_def(self):
