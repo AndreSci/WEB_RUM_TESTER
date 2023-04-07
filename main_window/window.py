@@ -40,6 +40,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bt_openFile_jpg.clicked.connect(self.open_file_in_folder)
         self.ui.bt_DoRequestReplaceCard.clicked.connect(self.do_request_replace_card)
         self.ui.bt_DoRequestBlockCardHolder.clicked.connect(self.do_request_block_card_holder)
+        self.ui.bt_DoRequestGuest.clicked.connect(self.do_request_guest)
 
         self.ui.bt_GetPhoto.clicked.connect(self.get_photo)
 
@@ -316,6 +317,33 @@ class MainWindow(QtWidgets.QMainWindow):
             print(f"Ошибка: {ex}")
 
         return ret_value
+
+    # STEP 3
+
+    def do_request_guest(self):
+
+        json_data = {
+            "inn": self.ui.text_inn_DoRequestGuest.text(),
+            "user_id": self.ui.text_user_id_DoRequestGuest.text(),
+            "id_remote": self.ui.text_id_remote_DoRequestGuest.text(),
+
+            "FFirstName": self.ui.text_FFirstName_DoRequestGuest.text(),
+            "FLastName": self.ui.text_FLastName_DoRequestGuest.text(),
+            "FMiddleName": self.ui.text_FMiddleName_DoRequestGuest.text(),
+
+            "FCarNumber": self.ui.text_FCarNumber_DoRequestGuest.text(),
+            "FPhone": self.ui.text_FPhone_DoRequestGuest.text(),
+            "FEmail": self.ui.text_FEmail.text(),
+
+            "FDateFrom": self.ui.text_FDateFrom_DoRequestGuest.text(),
+            "FDateTo": self.ui.text_FDateTo_DoRequestGuest.text()
+        }
+
+        result = self.request_api.do_request_guest(json_data)
+
+        self.ui.browser_DoRequestGuest.clear()
+        self.ui.browser_DoRequestGuest.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
 
     def exit_def(self):
         sys.exit()

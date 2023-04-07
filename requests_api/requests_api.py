@@ -256,3 +256,25 @@ class TestRequestRum:
             ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
 
         return ret_value
+
+    # done
+    def do_request_guest(self, json_data: dict):
+        """ Запрос на создание пропуска гостю """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/DoRequestGuest"
+
+        try:
+            result = requests.get(url, json=json_data, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
