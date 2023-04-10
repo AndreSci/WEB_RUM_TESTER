@@ -362,6 +362,41 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.browser_DoBlockGuest.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
+    def __get_guests_status(self, list_guests: list):
+
+        ret_value = {'RESULT': True, 'DESC': ''}
+
+        self.ui.tab_GetGuestsStatus.setRowCount(0)
+
+        if list_guests:
+            self.ui.tab_GetGuestsStatus.setRowCount(len(list_guests))
+
+            index = 0
+
+            try:
+                for it in list_guests:
+
+                    self.ui.tab_GetGuestsStatus.setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['Name_LastName'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['Name_FirstName'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 2, QtWidgets.QTableWidgetItem(str(it['Name_MIddleName'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 3, QtWidgets.QTableWidgetItem(str(it['Number_Car'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 4, QtWidgets.QTableWidgetItem(str(it['Date_Request'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 5, QtWidgets.QTableWidgetItem(str(it['FStatus'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 6,
+                                                        QtWidgets.QTableWidgetItem(str(it['DateFrom_Request'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 7, QtWidgets.QTableWidgetItem(str(it['DateTo_Request'])))
+
+                    index += 1
+            except Exception as ex:
+                msg = f"Исключение вызвало: {ex}"
+                print(msg)
+                ret_value['DESC'] = msg
+                ret_value['RESULT'] = False
+
+            self.ui.tab_list_employees.resizeColumnsToContents()
+
+        return ret_value
+
     def get_guests_status(self):
 
         json_data = {
@@ -370,6 +405,8 @@ class MainWindow(QtWidgets.QMainWindow):
         }
 
         result = self.request_api.get_guests_status(json_data)
+
+        self.__get_guests_status(result['DATA'])
 
         self.ui.browser_GetGuestsStatus.clear()
         self.ui.browser_GetGuestsStatus.setText(str(json.dumps(result, sort_keys=True,

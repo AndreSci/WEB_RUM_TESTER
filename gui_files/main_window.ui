@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1207</width>
-    <height>699</height>
+    <width>1242</width>
+    <height>714</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -30,7 +30,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>8</number>
+       <number>9</number>
       </property>
       <widget class="QWidget" name="tab_10">
        <attribute name="title">
@@ -4796,37 +4796,42 @@ p, li { white-space: pre-wrap; }
                     </property>
                     <column>
                      <property name="text">
-                      <string>FID</string>
+                      <string>Name_LastName</string>
                      </property>
                     </column>
                     <column>
                      <property name="text">
-                      <string>FlastName</string>
+                      <string>Name_FirstName</string>
                      </property>
                     </column>
                     <column>
                      <property name="text">
-                      <string>FFirstName</string>
+                      <string>Name_MIddleName</string>
                      </property>
                     </column>
                     <column>
                      <property name="text">
-                      <string>FMiddleName</string>
+                      <string>Number_Car</string>
                      </property>
                     </column>
                     <column>
                      <property name="text">
-                      <string>FTime</string>
+                      <string>Date_Request</string>
                      </property>
                     </column>
                     <column>
                      <property name="text">
-                      <string>Status</string>
+                      <string>FStatus</string>
                      </property>
                     </column>
                     <column>
                      <property name="text">
-                      <string>FActivity</string>
+                      <string>DateFrom_Request</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>DateTo_Request</string>
                      </property>
                     </column>
                    </widget>
