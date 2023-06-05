@@ -40,9 +40,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bt_GetPhoto.clicked.connect(self.get_photo)
 
         # step 3
-        self.ui.bt_DoRequestGuest.clicked.connect(self.do_request_guest)
+        self.ui.bt_DoRequestGuest.clicked.connect(self.do_request_guest)  # теперь это DoCreateGuest
         self.ui.bt_DoBlockGuest.clicked.connect(self.do_block_guest)
         self.ui.bt_GetGuestsStatus.clicked.connect(self.get_guests_status)
+        self.ui.bt_GetGuestsList.clicked.connect(self.get_guests_list)
+        self.ui.bt_DoChangeStatus.clicked.connect(self.do_change_status)
 
         self.set_ini = settings_ini
 
@@ -398,7 +400,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         json_data = {
             "inn": self.ui.text_inn_GetGuestsStatus.text(),
-            "user_id": self.ui.text_user_id_GetGuestsStatus.text()
+            "user_id": self.ui.text_user_id_GetGuestsStatus.text(),
+            "id_request": self.ui.text_id_reques_GetGuestsStatus.text()
         }
 
         result = self.request_api.get_guests_status(json_data)
@@ -407,6 +410,38 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.ui.browser_GetGuestsStatus.clear()
         self.ui.browser_GetGuestsStatus.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def get_guests_list(self):
+
+        json_data = {
+            "inn": self.ui.text_inn_GetGuestsList.text(),
+            "user_id": self.ui.text_user_id_GetGuestsList.text()
+        }
+
+        result = self.request_api.get_guests_list(json_data)
+
+        self.__get_guests_status(result['DATA'])
+
+        self.ui.browser_GetGuestsList.clear()
+        self.ui.browser_GetGuestsList.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def do_change_status(self):
+
+        json_data = {
+            "inn": self.ui.text_inn_DoChangeStatus.text(),
+            "user_id": self.ui.text_user_id_DoChangeStatus.text(),
+            "id_request": self.ui.text_id_request_DoChangeStatus.text(),
+            "id_status": self.ui.text_id_status_DoChangeStatus.text()
+        }
+
+        result = self.request_api.do_change_status(json_data)
+
+        self.__get_guests_status(result['DATA'])
+
+        self.ui.browser_DoChangeStatus.clear()
+        self.ui.browser_DoChangeStatus.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
     @staticmethod
