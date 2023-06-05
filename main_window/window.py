@@ -1,12 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-import requests
 import sys
 import json
-import ast
 
-from misc.logger import Logger
-from misc.utility import SettingsIni
 from gui_files.main_window import Ui_MainWindow
 from requests_api.requests_api import TestRequestRum
 from misc.img64 import PhotoReader
@@ -378,7 +374,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
                     self.ui.tab_GetGuestsStatus.setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['Name_LastName'])))
                     self.ui.tab_GetGuestsStatus.setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['Name_FirstName'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 2, QtWidgets.QTableWidgetItem(str(it['Name_MIddleName'])))
+                    self.ui.tab_GetGuestsStatus.setItem(index, 2,
+                                                        QtWidgets.QTableWidgetItem(str(it['Name_MIddleName'])))
                     self.ui.tab_GetGuestsStatus.setItem(index, 3, QtWidgets.QTableWidgetItem(str(it['Number_Car'])))
                     self.ui.tab_GetGuestsStatus.setItem(index, 4, QtWidgets.QTableWidgetItem(str(it['Date_Request'])))
                     self.ui.tab_GetGuestsStatus.setItem(index, 5, QtWidgets.QTableWidgetItem(str(it['FStatus'])))
@@ -412,7 +409,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.browser_GetGuestsStatus.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
-    def exit_def(self):
+    @staticmethod
+    def exit_def():
         sys.exit()
 
 
