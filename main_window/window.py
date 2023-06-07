@@ -42,9 +42,11 @@ class MainWindow(QtWidgets.QMainWindow):
         # step 3
         self.ui.bt_DoRequestGuest.clicked.connect(self.do_request_guest)  # теперь это DoCreateGuest
         self.ui.bt_DoBlockGuest.clicked.connect(self.do_block_guest)
-        self.ui.bt_GetGuestsStatus.clicked.connect(self.get_guests_status)
+        self.ui.bt_GetGuestsStatus.clicked.connect(self.get_guest_status)
         self.ui.bt_GetGuestsList.clicked.connect(self.get_guests_list)
         self.ui.bt_DoChangeStatus.clicked.connect(self.do_change_status)
+
+        self.ui.bt_DoTestCarNumber.clicked.connect(self.do_test_car_number)
 
         self.set_ini = settings_ini
 
@@ -360,30 +362,30 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.browser_DoBlockGuest.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
-    def __get_guests_status(self, list_guests: list):
-
+    def __get_guests_list_table(self, list_guests: list):
+        """ Заполняет таблицу в интерфейсе """
         ret_value = {'RESULT': True, 'DESC': ''}
 
-        self.ui.tab_GetGuestsStatus.setRowCount(0)
+        self.ui.tab_GetGuestsList.setRowCount(0)
 
         if list_guests:
-            self.ui.tab_GetGuestsStatus.setRowCount(len(list_guests))
+            self.ui.tab_GetGuestsList.setRowCount(len(list_guests))
 
             index = 0
 
             try:
+                # Заполняет таблицу данными
                 for it in list_guests:
-
-                    self.ui.tab_GetGuestsStatus.setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['Name_LastName'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['Name_FirstName'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 2,
+                    self.ui.tab_GetGuestsList.setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['ID_Request'])))
+                    self.ui.tab_GetGuestsList.setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['Name_LastName'])))
+                    self.ui.tab_GetGuestsList.setItem(index, 2, QtWidgets.QTableWidgetItem(str(it['Name_FirstName'])))
+                    self.ui.tab_GetGuestsList.setItem(index, 3,
                                                         QtWidgets.QTableWidgetItem(str(it['Name_MIddleName'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 3, QtWidgets.QTableWidgetItem(str(it['Number_Car'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 4, QtWidgets.QTableWidgetItem(str(it['Date_Request'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 5, QtWidgets.QTableWidgetItem(str(it['FStatus'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 6,
+                    self.ui.tab_GetGuestsList.setItem(index, 4, QtWidgets.QTableWidgetItem(str(it['Number_Car'])))
+                    self.ui.tab_GetGuestsList.setItem(index, 5, QtWidgets.QTableWidgetItem(str(it['Date_Request'])))
+                    self.ui.tab_GetGuestsList.setItem(index, 6,
                                                         QtWidgets.QTableWidgetItem(str(it['DateFrom_Request'])))
-                    self.ui.tab_GetGuestsStatus.setItem(index, 7, QtWidgets.QTableWidgetItem(str(it['DateTo_Request'])))
+                    self.ui.tab_GetGuestsList.setItem(index, 7, QtWidgets.QTableWidgetItem(str(it['DateTo_Request'])))
 
                     index += 1
             except Exception as ex:
@@ -392,11 +394,12 @@ class MainWindow(QtWidgets.QMainWindow):
                 ret_value['DESC'] = msg
                 ret_value['RESULT'] = False
 
+            # Подгоняет таблицу по тексту
             self.ui.tab_list_employees.resizeColumnsToContents()
 
         return ret_value
 
-    def get_guests_status(self):
+    def get_guest_status(self):
 
         json_data = {
             "inn": self.ui.text_inn_GetGuestsStatus.text(),
@@ -405,8 +408,6 @@ class MainWindow(QtWidgets.QMainWindow):
         }
 
         result = self.request_api.get_guests_status(json_data)
-
-        self.__get_guests_status(result['DATA'])
 
         self.ui.browser_GetGuestsStatus.clear()
         self.ui.browser_GetGuestsStatus.setText(str(json.dumps(result, sort_keys=True,
@@ -421,7 +422,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         result = self.request_api.get_guests_list(json_data)
 
-        self.__get_guests_status(result['DATA'])
+        self.__get_guests_list_table(result['DATA'])
 
         self.ui.browser_GetGuestsList.clear()
         self.ui.browser_GetGuestsList.setText(str(json.dumps(result, sort_keys=True,
@@ -438,10 +439,20 @@ class MainWindow(QtWidgets.QMainWindow):
 
         result = self.request_api.do_change_status(json_data)
 
-        self.__get_guests_status(result['DATA'])
-
         self.ui.browser_DoChangeStatus.clear()
         self.ui.browser_DoChangeStatus.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def do_test_car_number(self):
+
+        json_data = {
+            "car_number": self.ui.text_car_number_DoTestCarNumber.text()
+        }
+
+        result = self.request_api.do_test_car_number(json_data)
+
+        self.ui.browser_DoTestCarNumber.clear()
+        self.ui.browser_DoTestCarNumber.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
     @staticmethod

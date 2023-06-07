@@ -258,7 +258,7 @@ class TestRequestRum:
         return ret_value
 
     # ФАЗА 3
-    # done
+    # 3 done
     def do_request_guest(self, json_data: dict):
         """ Запрос на создание пропуска гостю """
 
@@ -280,7 +280,7 @@ class TestRequestRum:
 
         return ret_value
 
-    # done
+    # 3 done
     def do_block_guest(self, json_data: dict):
         """ Блокировка гостя """
 
@@ -302,7 +302,7 @@ class TestRequestRum:
 
         return ret_value
 
-    # done
+    # 3 done
     def get_guests_status(self, json_data: dict):
         """ Запрос списка активных заявок на гостей """
 
@@ -324,7 +324,7 @@ class TestRequestRum:
 
         return ret_value
 
-    # done
+    # 3 done
     def get_guests_list(self, json_data: dict):
         """ Запрос списка активных заявок на гостей """
 
@@ -346,13 +346,35 @@ class TestRequestRum:
 
         return ret_value
 
-    # done
+    # 3 done
     def do_change_status(self, json_data: dict):
         """ Запрос списка активных заявок на гостей """
 
         ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
 
         url = f"http://{self.host}:{self.port}/DoChangeStatus"
+
+        try:
+            result = requests.get(url, json=json_data, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    # 3 done
+    def do_test_car_number(self, json_data: dict):
+        """ Запрос списка активных заявок на гостей """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/DoTestCarNumber"
 
         try:
             result = requests.get(url, json=json_data, timeout=5)
