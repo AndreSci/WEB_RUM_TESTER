@@ -278,14 +278,17 @@ class MainWindow(QtWidgets.QMainWindow):
 
         img_name = self.ui.text_GetPhoto.text()
 
-        result = self.request_api.get_photo(img_name)
-        header = result['HEADER']
+        if len(img_name) < 256:
+            result = self.request_api.get_photo(img_name)
+            header = result['HEADER']
 
-        if result['RESULT'] == 'SUCCESS':
-            result = self.__get_photo(result)
-            result['HEADER'] = header
+            if result['RESULT'] == 'SUCCESS':
+                result = self.__get_photo(result)
+                result['HEADER'] = header
 
-        self.ui.browser_GetPhoto.clear()
+            self.ui.browser_GetPhoto.clear()
+        else:
+            result = {"RESULT": "ERROR", "DESC": 'Слишком длинное имя: max=256', "DATA": ''}
 
         self.ui.browser_GetPhoto.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
