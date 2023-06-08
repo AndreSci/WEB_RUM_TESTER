@@ -76,7 +76,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def request_employees(self):
-
+        """ Функция запрашивает список сотрудников на компанию """
         guid = self.ui.text_guid_request_employees.text()
 
         result = self.request_api.request_employees(guid)
@@ -91,7 +91,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                     indent=4, ensure_ascii=False)))
 
     def __request_employees(self, list_employees: list):
-
+        """ Функция заполнения таблицы списком сотрудников """
         ret_value = {'RESULT': True, 'DESC': ''}
 
         self.ui.tab_list_employees.setRowCount(0)
@@ -149,7 +149,7 @@ class MainWindow(QtWidgets.QMainWindow):
         return ret_value
 
     def add_account(self):
-
+        """ Функция пополнения счета сотрудника за счет компании """
         guid = self.ui.text_AddAccount_guid.text()
         units = self.ui.text_AddAccount_units.text()
 
@@ -160,6 +160,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def remove_account(self):
+        """ Функция списания со счета сотрудника в счет компании """
         guid = self.ui.text_RemoveAccount_guid.text()
         units = self.ui.text_RemoveAccount_units.text()
 
@@ -170,7 +171,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def __get_request_create_card_holder(self, list_card_holders: list):
-        """ Функция заполнения таблицы """
+        """ Функция заполнения таблицы списком ожидающих выпуск карты """
         ret_value = {'RESULT': True, 'DESC': ''}
 
         self.ui.tab_GetRequestCreateCardHolder.setRowCount(0)
@@ -210,6 +211,7 @@ class MainWindow(QtWidgets.QMainWindow):
         return ret_value
 
     def get_request_create_card_holder(self):
+        """ Получить список ожидающих выпуск карты на компанию """
         json_data = {
             "inn": self.ui.text_GerRequestCreateCardHolder_inn.text(),
             "user_id": self.ui.text_GetRequestCreateCardHolder_user_id.text()
@@ -227,6 +229,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                                 indent=4, ensure_ascii=False)))
 
     def do_request_block_card_holder(self):
+        """ Заблокировать сотрудника """
         json_data = {
             "inn": self.ui.text_inn_DoRequestBlockCardHolder.text(),
             "user_id": self.ui.text_user_id_DoRequestBlockCardHolder.text(),
@@ -275,7 +278,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def get_photo(self):
-
+        """ Получить фото по имени файла из интерфейса """
         img_name = self.ui.text_GetPhoto.text()
 
         if len(img_name) < 256:
@@ -294,7 +297,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def __get_photo(self, json_data: dict):
-
+        """ Функция обработки фото и добавление её в графический интерфейс """
         ret_value = {"RESULT": "ERROR", "DESC": '', "DATA": ''}
 
         pixmap = QtGui.QPixmap()
@@ -328,6 +331,7 @@ class MainWindow(QtWidgets.QMainWindow):
     # STEP 3
 
     def do_request_guest(self):
+        """ Создать гостя на компанию """
 
         json_data = {
             "inn": self.ui.text_inn_DoRequestGuest.text(),
@@ -352,6 +356,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def do_block_guest(self):
+        """ Заблокировать гостя """
 
         json_data = {
             "inn": self.ui.text_inn_DoBlockGuest.text(),
@@ -366,7 +371,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def __get_guests_list_table(self, list_guests: list):
-        """ Заполняет таблицу в интерфейсе """
+        """ (Приватная функция) Заполняет таблицу в интерфейсе """
         ret_value = {'RESULT': True, 'DESC': ''}
 
         self.ui.tab_GetGuestsList.setRowCount(0)
@@ -403,7 +408,7 @@ class MainWindow(QtWidgets.QMainWindow):
         return ret_value
 
     def get_guest_status(self):
-
+        """ Получить статус конкретного гостя """
         json_data = {
             "inn": self.ui.text_inn_GetGuestsStatus.text(),
             "user_id": self.ui.text_user_id_GetGuestsStatus.text(),
@@ -417,7 +422,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def get_guests_list(self):
-
+        """ Получить список всех гостей на компанию """
         json_data = {
             "inn": self.ui.text_inn_GetGuestsList.text(),
             "user_id": self.ui.text_user_id_GetGuestsList.text()
@@ -432,7 +437,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def do_change_status(self):
-
+        """ Изменить статус гостя """
         json_data = {
             "inn": self.ui.text_inn_DoChangeStatus.text(),
             "user_id": self.ui.text_user_id_DoChangeStatus.text(),
@@ -447,6 +452,7 @@ class MainWindow(QtWidgets.QMainWindow):
                                                                         indent=4, ensure_ascii=False)))
 
     def do_test_car_number(self):
+        """ Сервисная функция проверки работы алгоритма коррекции номера для БД """
 
         json_data = {
             "car_number": self.ui.text_car_number_DoTestCarNumber.text()
@@ -460,6 +466,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     @staticmethod
     def exit_def():
+        """ Выход из программы """
         sys.exit()
 
 
