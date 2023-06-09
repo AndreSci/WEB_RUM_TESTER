@@ -244,7 +244,7 @@ class TestRequestRum:
         url = f"http://{self.host}:{self.port}/GetPhoto?photo_name={photo_name}"
 
         try:
-            result = requests.get(url, timeout=5)
+            result = requests.get(url, timeout=2)
 
             if result.status_code == 200:
                 ret_value = result.json()

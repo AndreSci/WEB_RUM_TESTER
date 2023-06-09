@@ -283,11 +283,12 @@ class MainWindow(QtWidgets.QMainWindow):
 
         if len(img_name) < 256:
             result = self.request_api.get_photo(img_name)
-            header = result['HEADER']
+            header = result.get('HEADER')
 
             if result['RESULT'] == 'SUCCESS':
                 result = self.__get_photo(result)
-                result['HEADER'] = header
+
+            result['HEADER'] = header
 
             self.ui.browser_GetPhoto.clear()
         else:
