@@ -57,6 +57,35 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def load_readme(self):
 
+        # STEP 1
+        url_file = "./readme/step 1/RequestEmployees.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RequestEmployees.setText(file.read())
+
+        # STEP 2
+        url_file = "./readme/step 2/DoRequestBlockCardHolder.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_DoRequestBlockCardHolder.setText(file.read())
+        url_file = "./readme/step 2/DoRequestCreateCardHolder.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_DoRequestCreatCardHolder.setText(file.read())
+        url_file = "./readme/step 2/DoRequestReplaceCard.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_DoRequestReplaceCard.setText(file.read())
+        url_file = "./readme/step 2/GetPhoto.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_GetPhoto.setText(file.read())
+        url_file = "./readme/step 2/GetRequestCreateCardHolder.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_GetRequestCreateCardHolder.setText(file.read())
+
+        # STEP 3
         if os.path.exists("./readme/step 3/DoBlockGuest.txt"):
             with open("./readme/step 3/DoBlockGuest.txt", 'r', encoding='utf-8') as file:
                 self.ui.readme_DoBlockGuest.setText(file.read())

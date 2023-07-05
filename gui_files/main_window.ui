@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1242</width>
+    <width>1223</width>
     <height>714</height>
    </rect>
   </property>
@@ -30,7 +30,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_13">
        <attribute name="title">
@@ -681,6 +681,457 @@ p, li { white-space: pre-wrap; }
                       <widget class="QLabel" name="label_23">
                        <property name="text">
                         <string>GET - RemoveAccount</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_7">
+           <attribute name="title">
+            <string>Список сотрудников компании</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_76">
+            <item>
+             <widget class="QFrame" name="frame_15">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <property name="spacing">
+                <number>1</number>
+               </property>
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <item alignment="Qt::AlignTop">
+                <widget class="QFrame" name="frame_16">
+                 <property name="minimumSize">
+                  <size>
+                   <width>350</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>350</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_12">
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="frame_17">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_13">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_11">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>guid</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_guid_request_employees">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="bt_RequestEmployees">
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Request</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_26">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_22">
+                  <property name="spacing">
+                   <number>1</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                  <item>
+                   <widget class="QTabWidget" name="tabWidget_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>400</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QTabBar::tab:selected
+{
+	background:rgb(255,255,255);
+}</string>
+                    </property>
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <widget class="QWidget" name="tab_8">
+                     <attribute name="title">
+                      <string>Ответ</string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_39">
+                      <property name="spacing">
+                       <number>1</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <item>
+                       <widget class="QTextBrowser" name="browser_RequestEmployees">
+                        <property name="html">
+                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif'; font-size:8pt; color:#ad0002; background-color:#ffffff;&quot;&gt;&amp;quot;guid&lt;/span&gt;&lt;span style=&quot; font-family:'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif'; font-size:8pt; color:#212121; background-color:#ffffff;&quot;&gt;&amp;quot;:  &lt;/span&gt;&lt;span style=&quot; font-family:'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif'; font-size:8pt; color:#000000; background-color:#ffffff;&quot;&gt;{A25F685A-AC40-4946-B21A-AC1C5B54C705}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_36">
+                     <attribute name="title">
+                      <string>Таблица</string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_40">
+                      <item>
+                       <widget class="QTableWidget" name="tab_list_employees">
+                        <property name="styleSheet">
+                         <string notr="true">QHeaderView::section:horizontal
+{
+    border: 1px solid rgb(32, 34, 42);
+	background-color:rgb(53, 53, 53);
+	color: rgb(255, 255, 255);
+}
+
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(52, 59, 72);
+    width: 14px;
+	border-radius: 0px;
+ }</string>
+                        </property>
+                        <column>
+                         <property name="text">
+                          <string>UID</string>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <weight>50</weight>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="background">
+                          <color>
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FID</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FGUID</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FApacsID</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FCompanyID</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FLastName</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FFirstName</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FMiddleName</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FPhone</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FEmail</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FLastModifyDate</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FBlocked</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FActivity</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FActiveFrom</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FActiveTo</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FCreateDate</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FLastDecreaseDate</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FFavorite</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FGALState</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FAutobalance</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FCompanyAccount</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FPersonalAccount</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FPresentAccount</string>
+                         </property>
+                        </column>
+                        <column>
+                         <property name="text">
+                          <string>FVIPState</string>
+                         </property>
+                        </column>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_45">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_71">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_RequestEmployees"/>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_27">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_20">
+                       <property name="text">
+                        <string>GET - RequestEmployees</string>
                        </property>
                       </widget>
                      </item>
@@ -1413,7 +1864,7 @@ p, li { white-space: pre-wrap; }
                             <rect>
                              <x>72</x>
                              <y>0</y>
-                             <width>271</width>
+                             <width>261</width>
                              <height>32</height>
                             </rect>
                            </property>
@@ -1454,6 +1905,25 @@ p, li { white-space: pre-wrap; }
                        </layout>
                       </widget>
                      </item>
+                     <item>
+                      <widget class="QPushButton" name="bt_DoRequestCreatCardHolder">
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>100</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>Request</string>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </widget>
                   </item>
@@ -1482,9 +1952,34 @@ p, li { white-space: pre-wrap; }
                       <number>1</number>
                      </property>
                      <item>
-                      <widget class="QTextBrowser" name="browser_DoRequestCreatCardHolder">
-                       <property name="html">
-                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                      <widget class="QTabWidget" name="tabWidget_13">
+                       <property name="currentIndex">
+                        <number>0</number>
+                       </property>
+                       <widget class="QWidget" name="tab_37">
+                        <attribute name="title">
+                         <string>Ответ</string>
+                        </attribute>
+                        <layout class="QHBoxLayout" name="horizontalLayout_66">
+                         <property name="spacing">
+                          <number>1</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>1</number>
+                         </property>
+                         <item>
+                          <widget class="QTextBrowser" name="browser_DoRequestCreatCardHolder">
+                           <property name="html">
+                            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -1498,7 +1993,21 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;FEmail&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: email@gmail.com&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="tab_38">
+                        <attribute name="title">
+                         <string>ReadMe.txt</string>
+                        </attribute>
+                        <layout class="QHBoxLayout" name="horizontalLayout_67">
+                         <item>
+                          <widget class="QTextBrowser" name="readme_DoRequestCreatCardHolder"/>
+                         </item>
+                        </layout>
+                       </widget>
                       </widget>
                      </item>
                      <item>
@@ -1511,7 +2020,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>16777215</width>
+                         <width>200</width>
                          <height>50</height>
                         </size>
                        </property>
@@ -1537,25 +2046,6 @@ p, li { white-space: pre-wrap; }
                         <property name="bottomMargin">
                          <number>1</number>
                         </property>
-                        <item>
-                         <widget class="QPushButton" name="bt_DoRequestCreatCardHolder">
-                          <property name="minimumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>100</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="text">
-                           <string>Request</string>
-                          </property>
-                         </widget>
-                        </item>
                         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                          <widget class="QLabel" name="label_10">
                           <property name="text">
@@ -1909,6 +2399,16 @@ p, li { white-space: pre-wrap; }
                          </property>
                         </column>
                        </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_35">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_68">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_GetRequestCreateCardHolder"/>
                       </item>
                      </layout>
                     </widget>
@@ -2340,7 +2840,7 @@ p, li { white-space: pre-wrap; }
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_49">
+                    <layout class="QVBoxLayout" name="verticalLayout_27">
                      <property name="spacing">
                       <number>1</number>
                      </property>
@@ -2357,9 +2857,34 @@ p, li { white-space: pre-wrap; }
                       <number>1</number>
                      </property>
                      <item>
-                      <widget class="QTextBrowser" name="browser_DoRequestBlockCardHolder">
-                       <property name="html">
-                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                      <widget class="QTabWidget" name="tabWidget_14">
+                       <property name="currentIndex">
+                        <number>0</number>
+                       </property>
+                       <widget class="QWidget" name="tab_39">
+                        <attribute name="title">
+                         <string>Ответ</string>
+                        </attribute>
+                        <layout class="QHBoxLayout" name="horizontalLayout_69">
+                         <property name="spacing">
+                          <number>1</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>1</number>
+                         </property>
+                         <item>
+                          <widget class="QTextBrowser" name="browser_DoRequestBlockCardHolder">
+                           <property name="html">
+                            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -2368,10 +2893,24 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;FApacsID&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: 1048035&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="tab_40">
+                        <attribute name="title">
+                         <string>ReadMe.txt</string>
+                        </attribute>
+                        <layout class="QHBoxLayout" name="horizontalLayout_70">
+                         <item>
+                          <widget class="QTextBrowser" name="readme_DoRequestBlockCardHolder"/>
+                         </item>
+                        </layout>
+                       </widget>
                       </widget>
                      </item>
-                     <item>
+                     <item alignment="Qt::AlignLeft">
                       <widget class="QFrame" name="frame_61">
                        <property name="minimumSize">
                         <size>
@@ -2409,453 +2948,18 @@ p, li { white-space: pre-wrap; }
                         </property>
                         <item>
                          <widget class="QLabel" name="label_35">
+                          <property name="maximumSize">
+                           <size>
+                            <width>200</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
                           <property name="text">
                            <string>GET -DoRequestBlockCardHolder</string>
                           </property>
                          </widget>
                         </item>
                        </layout>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_5">
-           <attribute name="title">
-            <string>Список сотрудников компании</string>
-           </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_21">
-            <item>
-             <widget class="QFrame" name="frame_15">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_6">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <property name="leftMargin">
-                <number>1</number>
-               </property>
-               <property name="topMargin">
-                <number>1</number>
-               </property>
-               <property name="rightMargin">
-                <number>1</number>
-               </property>
-               <property name="bottomMargin">
-                <number>1</number>
-               </property>
-               <item alignment="Qt::AlignTop">
-                <widget class="QFrame" name="frame_16">
-                 <property name="minimumSize">
-                  <size>
-                   <width>350</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>350</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_12">
-                  <property name="leftMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>1</number>
-                  </property>
-                  <item>
-                   <widget class="QFrame" name="frame_17">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_13">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_11">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>guid</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_guid_request_employees">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>25</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="bt_RequestEmployees">
-                    <property name="minimumSize">
-                     <size>
-                      <width>100</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>100</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string>Request</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frame_26">
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_22">
-                  <property name="spacing">
-                   <number>1</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>1</number>
-                  </property>
-                  <item>
-                   <widget class="QTabWidget" name="tabWidget_2">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>400</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QTabBar::tab:selected
-{
-	background:rgb(255,255,255);
-}</string>
-                    </property>
-                    <property name="currentIndex">
-                     <number>0</number>
-                    </property>
-                    <widget class="QWidget" name="tab_7">
-                     <attribute name="title">
-                      <string>Ответ</string>
-                     </attribute>
-                     <layout class="QVBoxLayout" name="verticalLayout_39">
-                      <property name="spacing">
-                       <number>1</number>
-                      </property>
-                      <property name="leftMargin">
-                       <number>1</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>1</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>1</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>1</number>
-                      </property>
-                      <item>
-                       <widget class="QTextBrowser" name="browser_RequestEmployees">
-                        <property name="html">
-                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif'; font-size:8pt; color:#ad0002; background-color:#ffffff;&quot;&gt;&amp;quot;guid&lt;/span&gt;&lt;span style=&quot; font-family:'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif'; font-size:8pt; color:#212121; background-color:#ffffff;&quot;&gt;&amp;quot;:  &lt;/span&gt;&lt;span style=&quot; font-family:'Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif'; font-size:8pt; color:#000000; background-color:#ffffff;&quot;&gt;{A25F685A-AC40-4946-B21A-AC1C5B54C705}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                    <widget class="QWidget" name="tab_8">
-                     <attribute name="title">
-                      <string>Таблица</string>
-                     </attribute>
-                     <layout class="QVBoxLayout" name="verticalLayout_40">
-                      <item>
-                       <widget class="QTableWidget" name="tab_list_employees">
-                        <property name="styleSheet">
-                         <string notr="true">QHeaderView::section:horizontal
-{
-    border: 1px solid rgb(32, 34, 42);
-	background-color:rgb(53, 53, 53);
-	color: rgb(255, 255, 255);
-}
-
- QScrollBar:vertical {
-	border: none;
-    background: rgb(52, 59, 72);
-    width: 14px;
-	border-radius: 0px;
- }</string>
-                        </property>
-                        <column>
-                         <property name="text">
-                          <string>UID</string>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <weight>50</weight>
-                           <bold>false</bold>
-                          </font>
-                         </property>
-                         <property name="background">
-                          <color>
-                           <red>255</red>
-                           <green>255</green>
-                           <blue>255</blue>
-                          </color>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FID</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FGUID</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FApacsID</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FCompanyID</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FLastName</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FFirstName</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FMiddleName</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FPhone</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FEmail</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FLastModifyDate</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FBlocked</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FActivity</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FActiveFrom</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FActiveTo</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FCreateDate</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FLastDecreaseDate</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FFavorite</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FGALState</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FAutobalance</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FCompanyAccount</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FPersonalAccount</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FPresentAccount</string>
-                         </property>
-                        </column>
-                        <column>
-                         <property name="text">
-                          <string>FVIPState</string>
-                         </property>
-                        </column>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_27">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_7">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_20">
-                       <property name="text">
-                        <string>GET - RequestEmployees</string>
-                       </property>
                       </widget>
                      </item>
                     </layout>
@@ -3399,7 +3503,7 @@ p, li { white-space: pre-wrap; }
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_41">
+                    <layout class="QVBoxLayout" name="verticalLayout_37">
                      <property name="spacing">
                       <number>1</number>
                      </property>
@@ -3416,9 +3520,34 @@ p, li { white-space: pre-wrap; }
                       <number>1</number>
                      </property>
                      <item>
-                      <widget class="QTextBrowser" name="browser_DoRequestReplaceCard">
-                       <property name="html">
-                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                      <widget class="QTabWidget" name="tabWidget_15">
+                       <property name="currentIndex">
+                        <number>0</number>
+                       </property>
+                       <widget class="QWidget" name="tab_41">
+                        <attribute name="title">
+                         <string>Ответ</string>
+                        </attribute>
+                        <layout class="QHBoxLayout" name="horizontalLayout_72">
+                         <property name="spacing">
+                          <number>1</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>1</number>
+                         </property>
+                         <item>
+                          <widget class="QTextBrowser" name="browser_DoRequestReplaceCard">
+                           <property name="html">
+                            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -3430,7 +3559,21 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;FMiddleName&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: text&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="tab_42">
+                        <attribute name="title">
+                         <string>ReadMe.txt</string>
+                        </attribute>
+                        <layout class="QHBoxLayout" name="horizontalLayout_73">
+                         <item>
+                          <widget class="QTextBrowser" name="readme_DoRequestReplaceCard"/>
+                         </item>
+                        </layout>
+                       </widget>
                       </widget>
                      </item>
                      <item>
@@ -3666,7 +3809,7 @@ p, li { white-space: pre-wrap; }
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_50">
+                 <layout class="QVBoxLayout" name="verticalLayout_41">
                   <property name="spacing">
                    <number>1</number>
                   </property>
@@ -3683,14 +3826,53 @@ p, li { white-space: pre-wrap; }
                    <number>1</number>
                   </property>
                   <item>
-                   <widget class="QTextBrowser" name="browser_GetPhoto">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                   <widget class="QTabWidget" name="tabWidget_16">
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <widget class="QWidget" name="tab_43">
+                     <attribute name="title">
+                      <string>Ответ</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_74">
+                      <property name="spacing">
+                       <number>1</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <item>
+                       <widget class="QTextBrowser" name="browser_GetPhoto">
+                        <property name="html">
+                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;12.jpg&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_44">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_75">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_GetPhoto"/>
+                      </item>
+                     </layout>
+                    </widget>
                    </widget>
                   </item>
                   <item>
@@ -3761,6 +3943,835 @@ p, li { white-space: pre-wrap; }
           <property name="currentIndex">
            <number>0</number>
           </property>
+          <widget class="QWidget" name="tab_25">
+           <attribute name="title">
+            <string>Создать Гостя</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_58">
+            <item>
+             <widget class="QFrame" name="frame_65">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_27">
+               <property name="spacing">
+                <number>1</number>
+               </property>
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <item alignment="Qt::AlignTop">
+                <widget class="QFrame" name="frame_66">
+                 <property name="minimumSize">
+                  <size>
+                   <width>350</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>350</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_51">
+                  <item>
+                   <widget class="QFrame" name="frame_68">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_53">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_37">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>inn</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_inn_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_67">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_52">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_36">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>user_id</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_user_id_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_74">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_59">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_43">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>id_remote</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_id_remote_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_69">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_54">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_38">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>FLastName</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_FLastName_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_70">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_55">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_39">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>FFirstName</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_FFirstName_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_72">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_57">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_41">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>FMiddleName</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_FMiddleName_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_73">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_58">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_42">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>FCarNumber</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_FCarNumber_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_75">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_60">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_44">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>FDateFrom</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_FDateFrom_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_76">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_63">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_46">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>13</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>FDateTo</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="text_FDateTo_DoRequestGuest">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="bt_DoRequestGuest">
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Request</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_77">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <property name="spacing">
+                   <number>1</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                  <item>
+                   <widget class="QTabWidget" name="tabWidget_11">
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <widget class="QWidget" name="tab_31">
+                     <attribute name="title">
+                      <string>Ответ</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_45">
+                      <property name="spacing">
+                       <number>1</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <item>
+                       <widget class="QTextBrowser" name="browser_DoRequestGuest">
+                        <property name="html">
+                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#fffffe;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;{&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;inn&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;7751216310&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;user_id&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#098658;&quot;&gt;7528&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;id_remote&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#098658;&quot;&gt;1048035&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FLastName&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;Тест_фамилия&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FFirstName&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;Тест_имя&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FMiddleName&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;Тест_отчество&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FCarNumber&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;в100вв999&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FDateFrom&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;2023-04-06&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FDateTo&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;2023-04-20&amp;quot;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_32">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_64">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_DoRequestGuest"/>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_78">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>114</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_28">
+                     <property name="spacing">
+                      <number>1</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                      <widget class="QLabel" name="label_45">
+                       <property name="text">
+                        <string>GET - DoRequestGuest</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
           <widget class="QWidget" name="tab_24">
            <attribute name="title">
             <string>Получить список Гостей</string>
@@ -4168,415 +5179,6 @@ p, li { white-space: pre-wrap; }
                       <widget class="QLabel" name="label_58">
                        <property name="text">
                         <string>GET - GetGuestsList</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_18">
-           <attribute name="title">
-            <string>Блокировка Гостя</string>
-           </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_42">
-            <item>
-             <widget class="QFrame" name="frame_86">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_34">
-               <property name="spacing">
-                <number>1</number>
-               </property>
-               <property name="leftMargin">
-                <number>1</number>
-               </property>
-               <property name="topMargin">
-                <number>1</number>
-               </property>
-               <property name="rightMargin">
-                <number>1</number>
-               </property>
-               <property name="bottomMargin">
-                <number>1</number>
-               </property>
-               <item alignment="Qt::AlignTop">
-                <widget class="QFrame" name="frame_87">
-                 <property name="minimumSize">
-                  <size>
-                   <width>350</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>350</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_69">
-                  <item>
-                   <widget class="QFrame" name="frame_88">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_70">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_51">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>inn</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_inn_DoBlockGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>25</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_89">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_71">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_52">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>user_id</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_user_id_DoBlockGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>25</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_90">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_72">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_53">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>id_remote</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_id_remote_DoBlockGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>25</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="bt_DoBlockGuest">
-                    <property name="minimumSize">
-                     <size>
-                      <width>100</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>100</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string>Request</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frame_91">
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_73">
-                  <property name="spacing">
-                   <number>1</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>1</number>
-                  </property>
-                  <item>
-                   <widget class="QTabWidget" name="tabWidget_5">
-                    <property name="currentIndex">
-                     <number>0</number>
-                    </property>
-                    <widget class="QWidget" name="tab_19">
-                     <attribute name="title">
-                      <string>Ответ</string>
-                     </attribute>
-                     <layout class="QHBoxLayout" name="horizontalLayout_35">
-                      <property name="spacing">
-                       <number>1</number>
-                      </property>
-                      <property name="leftMargin">
-                       <number>1</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>1</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>1</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>1</number>
-                      </property>
-                      <item>
-                       <widget class="QTextBrowser" name="browser_DoBlockGuest">
-                        <property name="html">
-                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#fffffe;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;inn&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: 7751216310&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;user_id&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: 7528&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;id_remote&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: 1234&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                    <widget class="QWidget" name="tab_6">
-                     <attribute name="title">
-                      <string>ReadMe.txt</string>
-                     </attribute>
-                     <layout class="QHBoxLayout" name="horizontalLayout_61">
-                      <item>
-                       <widget class="QTextBrowser" name="readme_DoBlockGuest"/>
-                      </item>
-                     </layout>
-                    </widget>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_92">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_37">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_54">
-                       <property name="text">
-                        <string>GET - DoBlockGuest</string>
                        </property>
                       </widget>
                      </item>
@@ -5482,20 +6084,20 @@ p, li { white-space: pre-wrap; }
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="tab_25">
+          <widget class="QWidget" name="tab_18">
            <attribute name="title">
-            <string>Создать Гостя</string>
+            <string>Блокировка Гостя</string>
            </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_58">
+           <layout class="QHBoxLayout" name="horizontalLayout_42">
             <item>
-             <widget class="QFrame" name="frame_65">
+             <widget class="QFrame" name="frame_86">
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_27">
+              <layout class="QHBoxLayout" name="horizontalLayout_34">
                <property name="spacing">
                 <number>1</number>
                </property>
@@ -5512,7 +6114,7 @@ p, li { white-space: pre-wrap; }
                 <number>1</number>
                </property>
                <item alignment="Qt::AlignTop">
-                <widget class="QFrame" name="frame_66">
+                <widget class="QFrame" name="frame_87">
                  <property name="minimumSize">
                   <size>
                    <width>350</width>
@@ -5531,9 +6133,9 @@ p, li { white-space: pre-wrap; }
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_51">
+                 <layout class="QVBoxLayout" name="verticalLayout_69">
                   <item>
-                   <widget class="QFrame" name="frame_68">
+                   <widget class="QFrame" name="frame_88">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -5543,7 +6145,7 @@ p, li { white-space: pre-wrap; }
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
-                      <height>50</height>
+                      <height>16777215</height>
                      </size>
                     </property>
                     <property name="frameShape">
@@ -5552,7 +6154,7 @@ p, li { white-space: pre-wrap; }
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_53">
+                    <layout class="QVBoxLayout" name="verticalLayout_70">
                      <property name="spacing">
                       <number>1</number>
                      </property>
@@ -5569,7 +6171,7 @@ p, li { white-space: pre-wrap; }
                       <number>1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_37">
+                      <widget class="QLabel" name="label_51">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -5588,15 +6190,12 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="text_inn_DoRequestGuest">
+                      <widget class="QLineEdit" name="text_inn_DoBlockGuest">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
-                         <height>32</height>
+                         <height>25</height>
                         </size>
-                       </property>
-                       <property name="text">
-                        <string/>
                        </property>
                       </widget>
                      </item>
@@ -5604,7 +6203,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="frame_67">
+                   <widget class="QFrame" name="frame_89">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -5623,7 +6222,7 @@ p, li { white-space: pre-wrap; }
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_52">
+                    <layout class="QVBoxLayout" name="verticalLayout_71">
                      <property name="spacing">
                       <number>1</number>
                      </property>
@@ -5640,7 +6239,7 @@ p, li { white-space: pre-wrap; }
                       <number>1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_36">
+                      <widget class="QLabel" name="label_52">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -5659,11 +6258,11 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="text_user_id_DoRequestGuest">
+                      <widget class="QLineEdit" name="text_user_id_DoBlockGuest">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
-                         <height>32</height>
+                         <height>25</height>
                         </size>
                        </property>
                       </widget>
@@ -5672,7 +6271,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="frame_74">
+                   <widget class="QFrame" name="frame_90">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -5682,7 +6281,7 @@ p, li { white-space: pre-wrap; }
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
-                      <height>50</height>
+                      <height>16777215</height>
                      </size>
                     </property>
                     <property name="frameShape">
@@ -5691,7 +6290,7 @@ p, li { white-space: pre-wrap; }
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_59">
+                    <layout class="QVBoxLayout" name="verticalLayout_72">
                      <property name="spacing">
                       <number>1</number>
                      </property>
@@ -5708,7 +6307,7 @@ p, li { white-space: pre-wrap; }
                       <number>1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_43">
+                      <widget class="QLabel" name="label_53">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -5727,11 +6326,11 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="text_id_remote_DoRequestGuest">
+                      <widget class="QLineEdit" name="text_id_remote_DoBlockGuest">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
-                         <height>32</height>
+                         <height>25</height>
                         </size>
                        </property>
                       </widget>
@@ -5740,415 +6339,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="frame_69">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_54">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_38">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>FLastName</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_FLastName_DoRequestGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>32</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_70">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_55">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_39">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>FFirstName</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_FFirstName_DoRequestGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>32</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_72">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_57">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_41">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>FMiddleName</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_FMiddleName_DoRequestGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>32</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_73">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_58">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_42">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>FCarNumber</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_FCarNumber_DoRequestGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>32</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_75">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_60">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_44">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>FDateFrom</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_FDateFrom_DoRequestGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>32</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="frame_76">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_63">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item>
-                      <widget class="QLabel" name="label_46">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>13</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>FDateTo</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="text_FDateTo_DoRequestGuest">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>32</height>
-                        </size>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="bt_DoRequestGuest">
+                   <widget class="QPushButton" name="bt_DoBlockGuest">
                     <property name="minimumSize">
                      <size>
                       <width>100</width>
@@ -6170,14 +6361,14 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="frame_77">
+                <widget class="QFrame" name="frame_91">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                 <layout class="QVBoxLayout" name="verticalLayout_73">
                   <property name="spacing">
                    <number>1</number>
                   </property>
@@ -6194,15 +6385,15 @@ p, li { white-space: pre-wrap; }
                    <number>1</number>
                   </property>
                   <item>
-                   <widget class="QTabWidget" name="tabWidget_11">
+                   <widget class="QTabWidget" name="tabWidget_5">
                     <property name="currentIndex">
                      <number>0</number>
                     </property>
-                    <widget class="QWidget" name="tab_31">
+                    <widget class="QWidget" name="tab_19">
                      <attribute name="title">
                       <string>Ответ</string>
                      </attribute>
-                     <layout class="QHBoxLayout" name="horizontalLayout_45">
+                     <layout class="QHBoxLayout" name="horizontalLayout_35">
                       <property name="spacing">
                        <number>1</number>
                       </property>
@@ -6219,46 +6410,37 @@ p, li { white-space: pre-wrap; }
                        <number>1</number>
                       </property>
                       <item>
-                       <widget class="QTextBrowser" name="browser_DoRequestGuest">
+                       <widget class="QTextBrowser" name="browser_DoBlockGuest">
                         <property name="html">
                          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#fffffe;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;{&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;inn&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;7751216310&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;user_id&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#098658;&quot;&gt;7528&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;id_remote&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#098658;&quot;&gt;1048035&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FLastName&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;Тест_фамилия&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FFirstName&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;Тест_имя&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FMiddleName&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;Тест_отчество&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FCarNumber&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;в100вв999&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FDateFrom&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;2023-04-06&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#a31515;&quot;&gt;&amp;quot;FDateTo&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#0451a5;&quot;&gt;&amp;quot;2023-04-20&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:18px; background-color:#fffffe;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;inn&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: 7751216310&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;user_id&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: 7528&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#ad0002;&quot;&gt;&amp;quot;id_remote&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;: 1234&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                        </widget>
                       </item>
                      </layout>
                     </widget>
-                    <widget class="QWidget" name="tab_32">
+                    <widget class="QWidget" name="tab_6">
                      <attribute name="title">
                       <string>ReadMe.txt</string>
                      </attribute>
-                     <layout class="QHBoxLayout" name="horizontalLayout_64">
+                     <layout class="QHBoxLayout" name="horizontalLayout_61">
                       <item>
-                       <widget class="QTextBrowser" name="readme_DoRequestGuest"/>
+                       <widget class="QTextBrowser" name="readme_DoBlockGuest"/>
                       </item>
                      </layout>
                     </widget>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="frame_78">
+                   <widget class="QFrame" name="frame_92">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -6267,7 +6449,7 @@ p, li { white-space: pre-wrap; }
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>114</width>
+                      <width>16777215</width>
                       <height>50</height>
                      </size>
                     </property>
@@ -6277,7 +6459,7 @@ p, li { white-space: pre-wrap; }
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_28">
+                    <layout class="QHBoxLayout" name="horizontalLayout_37">
                      <property name="spacing">
                       <number>1</number>
                      </property>
@@ -6293,10 +6475,10 @@ p, li { white-space: pre-wrap; }
                      <property name="bottomMargin">
                       <number>1</number>
                      </property>
-                     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                      <widget class="QLabel" name="label_45">
+                     <item>
+                      <widget class="QLabel" name="label_54">
                        <property name="text">
-                        <string>GET - DoRequestGuest</string>
+                        <string>GET - DoBlockGuest</string>
                        </property>
                       </widget>
                      </item>
