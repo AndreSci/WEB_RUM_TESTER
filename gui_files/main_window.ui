@@ -30,7 +30,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_13">
        <attribute name="title">
@@ -707,7 +707,7 @@ p, li { white-space: pre-wrap; }
         <item>
          <widget class="QTabWidget" name="tabWidget_9">
           <property name="currentIndex">
-           <number>5</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
@@ -3759,7 +3759,7 @@ p, li { white-space: pre-wrap; }
         <item>
          <widget class="QTabWidget" name="tabWidget_7">
           <property name="currentIndex">
-           <number>5</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_24">
            <attribute name="title">
@@ -3993,6 +3993,21 @@ p, li { white-space: pre-wrap; }
                   <enum>QFrame::Raised</enum>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_77">
+                  <property name="spacing">
+                   <number>1</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
                   <item>
                    <widget class="QTabWidget" name="tabWidget_6">
                     <property name="currentIndex">
@@ -4098,6 +4113,16 @@ p, li { white-space: pre-wrap; }
                          </property>
                         </column>
                        </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_2">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_60">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_GetGuestsList"/>
                       </item>
                      </layout>
                     </widget>
@@ -4442,6 +4467,21 @@ p, li { white-space: pre-wrap; }
                   <enum>QFrame::Raised</enum>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_73">
+                  <property name="spacing">
+                   <number>1</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
                   <item>
                    <widget class="QTabWidget" name="tabWidget_5">
                     <property name="currentIndex">
@@ -4482,6 +4522,16 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                        </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_6">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_61">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_DoBlockGuest"/>
                       </item>
                      </layout>
                     </widget>
@@ -4826,6 +4876,21 @@ p, li { white-space: pre-wrap; }
                   <enum>QFrame::Raised</enum>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_67">
+                  <property name="spacing">
+                   <number>1</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
                   <item>
                    <widget class="QTabWidget" name="tabWidget_4">
                     <property name="currentIndex">
@@ -4866,6 +4931,16 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                        </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_9">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_62">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_GetGuestsStatus"/>
                       </item>
                      </layout>
                     </widget>
@@ -4929,7 +5004,7 @@ p, li { white-space: pre-wrap; }
            <attribute name="title">
             <string>Изменить статус</string>
            </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_33">
+           <layout class="QHBoxLayout" name="horizontalLayout_24">
             <item>
              <widget class="QFrame" name="frame_71">
               <property name="frameShape">
@@ -5273,33 +5348,58 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="frame_109">
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
+                <widget class="QTabWidget" name="tabWidget_10">
+                 <property name="currentIndex">
+                  <number>0</number>
                  </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_87">
-                  <property name="spacing">
-                   <number>1</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>1</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>1</number>
-                  </property>
-                  <item>
-                   <widget class="QTextBrowser" name="browser_DoChangeStatus">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                 <widget class="QWidget" name="tab_30">
+                  <attribute name="title">
+                   <string>Ответ</string>
+                  </attribute>
+                  <layout class="QHBoxLayout" name="horizontalLayout_33">
+                   <property name="spacing">
+                    <number>1</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>1</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>1</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>1</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>1</number>
+                   </property>
+                   <item>
+                    <widget class="QFrame" name="frame_109">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_87">
+                      <property name="spacing">
+                       <number>1</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <item>
+                       <widget class="QTextBrowser" name="browser_DoChangeStatus">
+                        <property name="html">
+                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -5311,56 +5411,70 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item alignment="Qt::AlignLeft">
-                   <widget class="QFrame" name="frame_110">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>50</height>
-                     </size>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_44">
-                     <property name="spacing">
-                      <number>1</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>1</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>1</number>
-                     </property>
-                     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                      <widget class="QLabel" name="label_66">
-                       <property name="text">
-                        <string>GET - DoChangeStatus</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
+                        </property>
+                       </widget>
+                      </item>
+                      <item alignment="Qt::AlignLeft">
+                       <widget class="QFrame" name="frame_110">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>50</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>50</height>
+                         </size>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_44">
+                         <property name="spacing">
+                          <number>1</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>1</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>1</number>
+                         </property>
+                         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                          <widget class="QLabel" name="label_66">
+                           <property name="text">
+                            <string>GET - DoChangeStatus</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="tab_10">
+                  <attribute name="title">
+                   <string>ReadMe.txt</string>
+                  </attribute>
+                  <layout class="QHBoxLayout" name="horizontalLayout_63">
+                   <item>
+                    <widget class="QTextBrowser" name="readme_DoChangeStatus"/>
+                   </item>
+                  </layout>
+                 </widget>
                 </widget>
                </item>
               </layout>
@@ -5372,7 +5486,7 @@ p, li { white-space: pre-wrap; }
            <attribute name="title">
             <string>Создать Гостя</string>
            </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_45">
+           <layout class="QHBoxLayout" name="horizontalLayout_58">
             <item>
              <widget class="QFrame" name="frame_65">
               <property name="frameShape">
@@ -6063,7 +6177,7 @@ p, li { white-space: pre-wrap; }
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_61">
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
                   <property name="spacing">
                    <number>1</number>
                   </property>
@@ -6080,9 +6194,34 @@ p, li { white-space: pre-wrap; }
                    <number>1</number>
                   </property>
                   <item>
-                   <widget class="QTextBrowser" name="browser_DoRequestGuest">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                   <widget class="QTabWidget" name="tabWidget_11">
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <widget class="QWidget" name="tab_31">
+                     <attribute name="title">
+                      <string>Ответ</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_45">
+                      <property name="spacing">
+                       <number>1</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <item>
+                       <widget class="QTextBrowser" name="browser_DoRequestGuest">
+                        <property name="html">
+                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -6101,10 +6240,24 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_32">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_64">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_DoRequestGuest"/>
+                      </item>
+                     </layout>
+                    </widget>
                    </widget>
                   </item>
-                  <item alignment="Qt::AlignLeft">
+                  <item>
                    <widget class="QFrame" name="frame_78">
                     <property name="minimumSize">
                      <size>
@@ -6114,7 +6267,7 @@ p, li { white-space: pre-wrap; }
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>16777215</width>
+                      <width>114</width>
                       <height>50</height>
                      </size>
                     </property>
@@ -6309,10 +6462,7 @@ p, li { white-space: pre-wrap; }
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_88">
-                  <property name="spacing">
-                   <number>1</number>
-                  </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_23">
                   <property name="leftMargin">
                    <number>1</number>
                   </property>
@@ -6326,9 +6476,34 @@ p, li { white-space: pre-wrap; }
                    <number>1</number>
                   </property>
                   <item>
-                   <widget class="QTextBrowser" name="browser_DoTestCarNumber">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                   <widget class="QTabWidget" name="tabWidget_12">
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <widget class="QWidget" name="tab_33">
+                     <attribute name="title">
+                      <string>Ответ</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_59">
+                      <property name="spacing">
+                       <number>1</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <item>
+                       <widget class="QTextBrowser" name="browser_DoTestCarNumber">
+                        <property name="html">
+                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -6337,10 +6512,24 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'IBMPlexMono,  Courier New , monospace,Consolas,Courier New,monospace'; font-size:8pt; color:#000000;&quot;&gt;для теста&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_34">
+                     <attribute name="title">
+                      <string>ReadMe.txt</string>
+                     </attribute>
+                     <layout class="QHBoxLayout" name="horizontalLayout_65">
+                      <item>
+                       <widget class="QTextBrowser" name="readme_DoTestCarNumber"/>
+                      </item>
+                     </layout>
+                    </widget>
                    </widget>
                   </item>
-                  <item alignment="Qt::AlignLeft">
+                  <item>
                    <widget class="QFrame" name="frame_113">
                     <property name="minimumSize">
                      <size>
@@ -6350,7 +6539,7 @@ p, li { white-space: pre-wrap; }
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>16777215</width>
+                      <width>130</width>
                       <height>50</height>
                      </size>
                     </property>

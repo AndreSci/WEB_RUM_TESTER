@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 import sys
 import json
+import os
 
 from gui_files.main_window import Ui_MainWindow
 from requests_api.requests_api import TestRequestRum
@@ -51,6 +52,29 @@ class MainWindow(QtWidgets.QMainWindow):
         self.set_ini = settings_ini
 
         self.request_api = TestRequestRum(self.set_ini['host'], self.set_ini['port'])
+
+        self.load_readme()
+
+    def load_readme(self):
+
+        if os.path.exists("./readme/step 3/DoBlockGuest.txt"):
+            with open("./readme/step 3/DoBlockGuest.txt", 'r', encoding='utf-8') as file:
+                self.ui.readme_DoBlockGuest.setText(file.read())
+        if os.path.exists("./readme/step 3/DoCreateGuest.txt"):
+            with open("./readme/step 3/DoCreateGuest.txt", 'r', encoding='utf-8') as file:
+                self.ui.readme_DoRequestGuest.setText(file.read())
+        if os.path.exists("./readme/step 3/GetGuestsList.txt"):
+            with open("./readme/step 3/GetGuestsList.txt", 'r', encoding='utf-8') as file:
+                self.ui.readme_GetGuestsList.setText(file.read())
+        if os.path.exists("./readme/step 3/GetGuestStatus.txt"):
+            with open("./readme/step 3/GetGuestStatus.txt", 'r', encoding='utf-8') as file:
+                self.ui.readme_GetGuestsStatus.setText(file.read())
+        if os.path.exists("./readme/step 3/service/DoChangeStatus.txt"):
+            with open("./readme/step 3/service/DoChangeStatus.txt", 'r', encoding='utf-8') as file:
+                self.ui.readme_DoChangeStatus.setText(file.read())
+        if os.path.exists("./readme/step 3/service/DoTestCarNumber.txt"):
+            with open("./readme/step 3/service/DoTestCarNumber.txt", 'r', encoding='utf-8') as file:
+                self.ui.readme_DoTestCarNumber.setText(file.read())
 
     def do_request_create_car_holder(self):
 
@@ -337,7 +361,7 @@ class MainWindow(QtWidgets.QMainWindow):
         json_data = {
             "inn": self.ui.text_inn_DoRequestGuest.text(),
             "user_id": self.ui.text_user_id_DoRequestGuest.text(),
-            "id_remote": self.ui.text_id_remote_DoRequestGuest.text(),
+            "id": self.ui.text_id_remote_DoRequestGuest.text(),
 
             "FFirstName": self.ui.text_FFirstName_DoRequestGuest.text(),
             "FLastName": self.ui.text_FLastName_DoRequestGuest.text(),
@@ -362,7 +386,7 @@ class MainWindow(QtWidgets.QMainWindow):
         json_data = {
             "inn": self.ui.text_inn_DoBlockGuest.text(),
             "user_id": self.ui.text_user_id_DoBlockGuest.text(),
-            "id_remote": self.ui.text_id_remote_DoBlockGuest.text()
+            "id": self.ui.text_id_remote_DoBlockGuest.text()
         }
 
         result = self.request_api.do_block_guest(json_data)
