@@ -29,10 +29,15 @@ class MainWindow(QtWidgets.QMainWindow):
         self.photo_folder = ''
 
         # кнопки
-        self.ui.bt_DoRequestCreatCardHolder.clicked.connect(self.do_request_create_car_holder)
-        self.ui.bt_RequestEmployees.clicked.connect(self.request_employees)
+        # step 1
+        self.ui.bt_RequestCompanyTransaction.clicked.connect(self.request_company_transaction)
         self.ui.bt_AddAccount.clicked.connect(self.add_account)
         self.ui.bt_RemoveAccount.clicked.connect(self.remove_account)
+        self.ui.bt_RequestEmployees.clicked.connect(self.request_employees)
+        self.ui.bt_GetEmployeeInfo.clicked.connect(self.get_employee_info)
+
+        # step 2
+        self.ui.bt_DoRequestCreatCardHolder.clicked.connect(self.do_request_create_car_holder)
         self.ui.bt_GetRequestCreateCardHolder.clicked.connect(self.get_request_create_card_holder)
         self.ui.bt_openFile_jpg.clicked.connect(self.open_file_in_folder)
         self.ui.bt_DoRequestReplaceCard.clicked.connect(self.do_request_replace_card)
@@ -58,10 +63,30 @@ class MainWindow(QtWidgets.QMainWindow):
     def load_readme(self):
 
         # STEP 1
+        url_file = "./readme/step 1/AddAccount.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_AddAccount.setText(file.read())
+
+        url_file = "./readme/step 1/RemoveAccount.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RemoveAccount.setText(file.read())
+
         url_file = "./readme/step 1/RequestEmployees.txt"
         if os.path.exists(url_file):
             with open(url_file, 'r', encoding='utf-8') as file:
                 self.ui.readme_RequestEmployees.setText(file.read())
+
+        url_file = "./readme/step 1/GetEmployeeInfo.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_GetEmployeeInfo.setText(file.read())
+
+        url_file = "./readme/step 1/RequestCompanyTransaction.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RequestCompanyTransaction.setText(file.read())
 
         # STEP 2
         url_file = "./readme/step 2/DoRequestBlockCardHolder.txt"
@@ -105,27 +130,27 @@ class MainWindow(QtWidgets.QMainWindow):
             with open("./readme/step 3/service/DoTestCarNumber.txt", 'r', encoding='utf-8') as file:
                 self.ui.readme_DoTestCarNumber.setText(file.read())
 
-    def do_request_create_car_holder(self):
+    # STEP 1
+    def add_account(self):
+        """ Функция пополнения счета сотрудника за счет компании """
+        guid = self.ui.text_AddAccount_guid.text()
+        units = self.ui.text_AddAccount_units.text()
 
-        json_data = {
-            "inn": self.ui.text_inn.text(),
-            "user_id": self.ui.text_user_id.text(),
+        result = self.request_api.add_account(guid, units)
 
-            "FFirstName": self.ui.text_FFirstName.text(),
-            "FLastName": self.ui.text_FLastName.text(),
-            "FMiddleName": self.ui.text_FMiddleName.text(),
+        print(result)
+        self.ui.browser_AddAccount.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
 
-            "FCarNumber": self.ui.text_FCarNumber.text(),
-            "FPhone": self.ui.text_FPhone.text(),
-            "FEmail": self.ui.text_FEmail.text(),
+    def remove_account(self):
+        """ Функция списания со счета сотрудника в счет компании """
+        guid = self.ui.text_RemoveAccount_guid.text()
+        units = self.ui.text_RemoveAccount_units.text()
 
-            "img64": PhotoReader.take_photo(self.ui.text_img64.text())
-        }
+        result = self.request_api.remove_account(guid, units)
 
-        result = self.request_api.do_request_create_card_holder(json_data)
-
-        self.ui.browser_DoRequestCreatCardHolder.clear()
-        self.ui.browser_DoRequestCreatCardHolder.setText(str(json.dumps(result, sort_keys=True,
+        print(result)
+        self.ui.browser_RemoveAccount.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
     def request_employees(self):
@@ -201,26 +226,153 @@ class MainWindow(QtWidgets.QMainWindow):
 
         return ret_value
 
-    def add_account(self):
-        """ Функция пополнения счета сотрудника за счет компании """
-        guid = self.ui.text_AddAccount_guid.text()
-        units = self.ui.text_AddAccount_units.text()
+    def __request_company_transaction(self, list_transaction: list):
+        """ Функция заполнения таблицы списком сотрудников """
+        ret_value = {'RESULT': True, 'DESC': ''}
 
-        result = self.request_api.add_account(guid, units)
+        self.ui.tab_list_RequestCompanyTransaction.setRowCount(0)
 
-        print(result)
-        self.ui.browser_AddAccount.setText(str(json.dumps(result, sort_keys=True,
-                                                                        indent=4, ensure_ascii=False)))
+        if list_transaction:
+            self.ui.tab_list_RequestCompanyTransaction.setRowCount(len(list_transaction))
 
-    def remove_account(self):
-        """ Функция списания со счета сотрудника в счет компании """
-        guid = self.ui.text_RemoveAccount_guid.text()
-        units = self.ui.text_RemoveAccount_units.text()
+            index = 0
 
-        result = self.request_api.remove_account(guid, units)
+            try:
+                for it in list_transaction:
 
-        print(result)
-        self.ui.browser_RemoveAccount.setText(str(json.dumps(result, sort_keys=True,
+                    self.ui.tab_list_RequestCompanyTransaction.\
+                        setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['FGUIDFrom'])))
+                    self.ui.tab_list_RequestCompanyTransaction.\
+                        setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['FGUIDTo'])))
+                    self.ui.tab_list_RequestCompanyTransaction.\
+                        setItem(index, 2, QtWidgets.QTableWidgetItem(str(it['FTime'])))
+                    self.ui.tab_list_RequestCompanyTransaction.\
+                        setItem(index, 3, QtWidgets.QTableWidgetItem(str(it['FTransactionTypeName'])))
+                    self.ui.tab_list_RequestCompanyTransaction.\
+                        setItem(index, 4, QtWidgets.QTableWidgetItem(str(it['FValue'])))
+
+                    index += 1
+            except Exception as ex:
+                msg = f"Исключение вызвало: {ex}"
+                print(msg)
+                ret_value['DESC'] = msg
+                ret_value['RESULT'] = False
+
+            self.ui.tab_list_RequestCompanyTransaction.resizeColumnsToContents()
+
+        return ret_value
+
+    def request_company_transaction(self):
+        """ Функция запрашивает список сотрудников на компанию """
+        guid = self.ui.guid_RequestCompanyTransaction.text()
+        data_from = self.ui.data_from_RequestCompanyTransaction.text()
+        data_to = self.ui.data_to_RequestCompanyTransaction.text()
+
+        result = self.request_api.request_company_transaction(guid, data_from, data_to)
+
+        tab_res = self.__request_company_transaction(result.get('DATA'))
+
+        if tab_res['RESULT']:
+            self.ui.browser_RequestCompanyTransaction.setText(str(json.dumps(result, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+        else:
+            self.ui.browser_RequestCompanyTransaction.setText(str(json.dumps(tab_res, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+
+    def __get_employee_info(self, list_data: list):
+        """ Функция заполнения таблицы списком сотрудников """
+        ret_value = {'RESULT': True, 'DESC': ''}
+
+        self.ui.tab_list_GetEmployeeInfo.setRowCount(0)
+
+        if list_data:
+            self.ui.tab_list_GetEmployeeInfo.setRowCount(len(list_data))
+
+            index = 0
+
+            try:
+                for it in list_data:
+
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['UID'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['FLastName'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 2, QtWidgets.QTableWidgetItem(str(it['FFirstName'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 3, QtWidgets.QTableWidgetItem(str(it['FMiddleName'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 4, QtWidgets.QTableWidgetItem(str(it['FPhone'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 5, QtWidgets.QTableWidgetItem(str(it['FGUID'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 6, QtWidgets.QTableWidgetItem(str(it['FEmail'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 7, QtWidgets.QTableWidgetItem(str(it['FCreateDate'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 8, QtWidgets.QTableWidgetItem(str(it['FPersonalAccount'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 9, QtWidgets.QTableWidgetItem(str(it['FCompanyAccount'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 10, QtWidgets.QTableWidgetItem(str(it['FLastModifyDate'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 11, QtWidgets.QTableWidgetItem(str(it['FLastDecreaseDate'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 12, QtWidgets.QTableWidgetItem(str(it['FFavorite'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 13, QtWidgets.QTableWidgetItem(str(it['FBlocked'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 14, QtWidgets.QTableWidgetItem(str(it['FActivity'])))
+
+                    index += 1
+            except Exception as ex:
+                msg = f"Исключение вызвало: {ex}"
+                print(msg)
+                ret_value['DESC'] = msg
+                ret_value['RESULT'] = False
+
+            self.ui.tab_list_GetEmployeeInfo.resizeColumnsToContents()
+
+        return ret_value
+
+    def get_employee_info(self):
+        """ Функция запрашивает информацию о сотруднике """
+        guid = self.ui.guid_GetEmployeeInfo.text()
+        uid = self.ui.uid_GetEmployeeInfo.text()
+
+        result = self.request_api.get_employee_info(guid, uid)
+
+        tab_res = self.__get_employee_info(result.get('DATA'))
+
+        if tab_res['RESULT']:
+            self.ui.browser_GetEmployeeInfo.setText(str(json.dumps(result, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+        else:
+            self.ui.browser_GetEmployeeInfo.setText(str(json.dumps(tab_res, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+
+    # STEP 2
+    def do_request_create_car_holder(self):
+
+        json_data = {
+            "inn": self.ui.text_inn.text(),
+            "user_id": self.ui.text_user_id.text(),
+
+            "FFirstName": self.ui.text_FFirstName.text(),
+            "FLastName": self.ui.text_FLastName.text(),
+            "FMiddleName": self.ui.text_FMiddleName.text(),
+
+            "FCarNumber": self.ui.text_FCarNumber.text(),
+            "FPhone": self.ui.text_FPhone.text(),
+            "FEmail": self.ui.text_FEmail.text(),
+
+            "img64": PhotoReader.take_photo(self.ui.text_img64.text())
+        }
+
+        result = self.request_api.do_request_create_card_holder(json_data)
+
+        self.ui.browser_DoRequestCreatCardHolder.clear()
+        self.ui.browser_DoRequestCreatCardHolder.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
 
     def __get_request_create_card_holder(self, list_card_holders: list):

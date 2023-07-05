@@ -146,6 +146,51 @@ class TestRequestRum:
 
         return ret_value
 
+    # done
+    def request_company_transaction(self, guid, data_from, data_to) -> dict:
+        """ Переместить п.е. от компании к сотруднику """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/RequestCompanyTransaction?" \
+              f"guid={guid}&data_from={data_from}&data_to={data_to}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    # done
+    def get_employee_info(self, guid, uid) -> dict:
+        """ Получить информацию о сотруднике """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/GetEmployeeInfo?guid={guid}&uid={uid}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
     # ФАЗА 2
 
     # done
