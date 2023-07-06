@@ -125,6 +125,49 @@ class TestRequestRum:
 
         return ret_value
 
+    def set_favorite(self, guid, is_favorite):
+        """ Меняет флаг Favorite в БД """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/SetFavorite?guid={guid}&is_favorite={is_favorite}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    def request_company(self, inn, id_company):
+        """ Получает данные компании из БД """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/RequestCompany?InnCompany={inn}&IDCompany={id_company}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    # done
     def remove_car_employee(self, guid, id_number):
         """ Отвязать номер от сотрудника """
 
@@ -176,6 +219,28 @@ class TestRequestRum:
         ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
 
         url = f"http://{self.host}:{self.port}/GetEmployeeInfo?guid={guid}&uid={uid}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    # done
+    def request_cars_employee(self, guid) -> dict:
+        """ Получить информацию о сотруднике """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/RequestCarsEmployee?guid={guid}"
 
         try:
             result = requests.get(url, timeout=5)

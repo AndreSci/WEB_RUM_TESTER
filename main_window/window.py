@@ -9,7 +9,7 @@ from requests_api.requests_api import TestRequestRum
 from misc.img64 import PhotoReader
 
 
-NAME_VER = "TEST WEB RUM"
+NAME_VER = "WEB_RUM TESTER"
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -35,6 +35,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bt_RemoveAccount.clicked.connect(self.remove_account)
         self.ui.bt_RequestEmployees.clicked.connect(self.request_employees)
         self.ui.bt_GetEmployeeInfo.clicked.connect(self.get_employee_info)
+        self.ui.bt_RequestCarsEmployee.clicked.connect(self.request_cars_employee)
+        self.ui.bt_RemoveCarEmployee.clicked.connect(self.remove_car_employee)
+        self.ui.bt_SetCarEmployee.clicked.connect(self.set_car_employee)
+        self.ui.bt_SetFavorite.clicked.connect(self.set_favorite)
+        self.ui.bt_RequestCompany.clicked.connect(self.request_company)
 
         # step 2
         self.ui.bt_DoRequestCreatCardHolder.clicked.connect(self.do_request_create_car_holder)
@@ -87,6 +92,31 @@ class MainWindow(QtWidgets.QMainWindow):
         if os.path.exists(url_file):
             with open(url_file, 'r', encoding='utf-8') as file:
                 self.ui.readme_RequestCompanyTransaction.setText(file.read())
+
+        url_file = "./readme/step 1/RequestCarsEmployee.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RequestCarsEmployee.setText(file.read())
+
+        url_file = "./readme/step 1/RemoveCarEmploye.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RemoveCarEmployee.setText(file.read())
+
+        url_file = "./readme/step 1/SetCarEmployee.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_SetCarEmployee.setText(file.read())
+
+        url_file = "./readme/step 1/SetFavorite.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_SetFavorite.setText(file.read())
+
+        url_file = "./readme/step 1/RequestCompany.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RequestCompany.setText(file.read())
 
         # STEP 2
         url_file = "./readme/step 2/DoRequestBlockCardHolder.txt"
@@ -350,6 +380,91 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             self.ui.browser_GetEmployeeInfo.setText(str(json.dumps(tab_res, sort_keys=True,
                                                                              indent=4, ensure_ascii=False)))
+
+    def __request_cars_employee(self, list_data: list):
+        """ Функция заполнения таблицы списком сотрудников """
+        ret_value = {'RESULT': True, 'DESC': ''}
+
+        self.ui.tab_list_RequestCarsEmployee.setRowCount(0)
+
+        if list_data:
+            self.ui.tab_list_RequestCarsEmployee.setRowCount(len(list_data))
+
+            index = 0
+
+            try:
+                for it in list_data:
+
+                    self.ui.tab_list_RequestCarsEmployee.\
+                        setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['FPlateID'])))
+                    self.ui.tab_list_RequestCarsEmployee.\
+                        setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['FPlate'])))
+
+                    index += 1
+            except Exception as ex:
+                msg = f"Исключение вызвало: {ex}"
+                print(msg)
+                ret_value['DESC'] = msg
+                ret_value['RESULT'] = False
+
+            self.ui.tab_list_RequestCarsEmployee.resizeColumnsToContents()
+
+        return ret_value
+
+    def request_cars_employee(self):
+        """ Функция запрашивает информацию о машинах которые значатся на сотрудников """
+        guid = self.ui.guid_RequestCarsEmployee.text()
+
+        result = self.request_api.request_cars_employee(guid)
+
+        tab_res = self.__request_cars_employee(result.get('DATA'))
+
+        if tab_res['RESULT']:
+            self.ui.browser_RequestCarsEmployee.setText(str(json.dumps(result, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+        else:
+            self.ui.browser_RequestCarsEmployee.setText(str(json.dumps(tab_res, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+
+    def remove_car_employee(self):
+        """ Удаляет авто из списка на сотрудника """
+        guid = self.ui.text_guid_RemoveCarEmployee.text()
+        f_plate_id = self.ui.text_fplateid_RemoveCarEmployee.text()
+
+        result = self.request_api.remove_car_employee(guid, f_plate_id)
+
+        self.ui.browser_RemoveCarEmployee.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def set_car_employee(self):
+        """ Добавляет авто в список на сотрудника """
+        guid = self.ui.text_guid_SetCarEmployee.text()
+        car_number = self.ui.text_car_number_SetCarEmployee.text()
+
+        result = self.request_api.set_car_employee(guid, car_number)
+
+        self.ui.browser_SetCarEmployee.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def set_favorite(self):
+        """ Функция устанавливает флаг на сотрудника избранный или нет 1/0 """
+        guid = self.ui.text_guid_SetFavorite.text()
+        is_favorite = self.ui.text_is_favorite_SetFavorite.text()
+
+        result = self.request_api.set_favorite(guid, is_favorite)
+
+        self.ui.browser_SetFavorite.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def request_company(self):
+        """ Функция устанавливает флаг на сотрудника избранный или нет 1/0 """
+        inn = self.ui.text_inn_RequestCompany.text()
+        id_company = self.ui.text_id_RequestCompany.text()
+
+        result = self.request_api.request_company(inn, id_company)
+
+        self.ui.browser_RequestCompany.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
 
     # STEP 2
     def do_request_create_car_holder(self):
