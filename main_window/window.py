@@ -40,6 +40,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.bt_SetCarEmployee.clicked.connect(self.set_car_employee)
         self.ui.bt_SetFavorite.clicked.connect(self.set_favorite)
         self.ui.bt_RequestCompany.clicked.connect(self.request_company)
+        self.ui.bt_SetAutoBalance.clicked.connect(self.set_auto_balance)
+        self.ui.bt_SetContacts.clicked.connect(self.set_contacts)
+        self.ui.bt_RequestTransaction.clicked.connect(self.request_transaction)
+        self.ui.bt_RequestDecrease.clicked.connect(self.request_decrease)
 
         # step 2
         self.ui.bt_DoRequestCreatCardHolder.clicked.connect(self.do_request_create_car_holder)
@@ -117,6 +121,26 @@ class MainWindow(QtWidgets.QMainWindow):
         if os.path.exists(url_file):
             with open(url_file, 'r', encoding='utf-8') as file:
                 self.ui.readme_RequestCompany.setText(file.read())
+
+        url_file = "./readme/step 1/SetAutoBalance.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_SetAutoBalance.setText(file.read())
+
+        url_file = "./readme/step 1/SetContacts.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_SetContacts.setText(file.read())
+
+        url_file = "./readme/step 1/RequestTransaction.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RequestTransaction.setText(file.read())
+
+        url_file = "./readme/step 1/RequestDecrease.txt"
+        if os.path.exists(url_file):
+            with open(url_file, 'r', encoding='utf-8') as file:
+                self.ui.readme_RequestDecrease.setText(file.read())
 
         # STEP 2
         url_file = "./readme/step 2/DoRequestBlockCardHolder.txt"
@@ -353,6 +377,8 @@ class MainWindow(QtWidgets.QMainWindow):
                         setItem(index, 13, QtWidgets.QTableWidgetItem(str(it['FBlocked'])))
                     self.ui.tab_list_GetEmployeeInfo.\
                         setItem(index, 14, QtWidgets.QTableWidgetItem(str(it['FActivity'])))
+                    self.ui.tab_list_GetEmployeeInfo.\
+                        setItem(index, 15, QtWidgets.QTableWidgetItem(str(it.get('FAutobalance'))))
 
                     index += 1
             except Exception as ex:
@@ -465,6 +491,125 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.ui.browser_RequestCompany.setText(str(json.dumps(result, sort_keys=True,
                                                                         indent=4, ensure_ascii=False)))
+
+    def set_auto_balance(self):
+        """ Функция устанавливает флаг на сотрудника избранный или нет 1/0 """
+        guid = self.ui.guid_SetAutoBalance.text()
+        units = self.ui.units_SetAutoBalance.text()
+
+        result = self.request_api.set_auto_balance(guid, units)
+
+        self.ui.browser_SetAutoBalance.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def set_contacts(self):
+        """ Функция устанавливает флаг на сотрудника избранный или нет 1/0 """
+        guid = self.ui.guid_SetContacts.text()
+        phone = self.ui.phone_SetContacts.text()
+        email = self.ui.email_SetContacts.text()
+
+        result = self.request_api.set_contacts(guid, phone, email)
+
+        self.ui.browser_SetContacts.setText(str(json.dumps(result, sort_keys=True,
+                                                                        indent=4, ensure_ascii=False)))
+
+    def __request_transaction(self, list_transaction: list):
+        """ Функция заполнения таблицы списком транзакций сотрудника """
+        ret_value = {'RESULT': True, 'DESC': ''}
+
+        self.ui.tab_list_RequestTransaction.setRowCount(0)
+
+        if list_transaction:
+            self.ui.tab_list_RequestTransaction.setRowCount(len(list_transaction))
+
+            index = 0
+
+            try:
+                for it in list_transaction:
+
+                    self.ui.tab_list_RequestTransaction.\
+                        setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['FTime'])))
+                    self.ui.tab_list_RequestTransaction.\
+                        setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['FTransactionType'])))
+                    self.ui.tab_list_RequestTransaction.\
+                        setItem(index, 2, QtWidgets.QTableWidgetItem(str(it['FValue'])))
+
+                    index += 1
+            except Exception as ex:
+                msg = f"Исключение вызвало: {ex}"
+                print(msg)
+                ret_value['DESC'] = msg
+                ret_value['RESULT'] = False
+
+            self.ui.tab_list_RequestTransaction.resizeColumnsToContents()
+
+        return ret_value
+
+    def request_transaction(self):
+        """ Функция запрашивает список транзакций на сотрудника """
+        guid = self.ui.guid_RequestTransaction.text()
+        data_from = self.ui.data_from_RequestTransaction.text()
+        data_to = self.ui.data_to_RequestTransaction.text()
+
+        result = self.request_api.request_transaction(guid, data_from, data_to)
+
+        tab_res = self.__request_transaction(result.get('DATA'))
+
+        if tab_res['RESULT']:
+            self.ui.browser_RequestTransaction.setText(str(json.dumps(result, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+        else:
+            self.ui.browser_RequestTransaction.setText(str(json.dumps(tab_res, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+
+    def __request_decrease(self, list_transaction: list):
+        """ Функция заполнения таблицы списком транзакций сотрудника """
+        ret_value = {'RESULT': True, 'DESC': ''}
+
+        self.ui.tab_list_RequestDecrease.setRowCount(0)
+
+        if list_transaction:
+            self.ui.tab_list_RequestDecrease.setRowCount(len(list_transaction))
+
+            index = 0
+
+            try:
+                for it in list_transaction:
+
+                    self.ui.tab_list_RequestDecrease.\
+                        setItem(index, 0, QtWidgets.QTableWidgetItem(str(it['FTime'])))
+                    self.ui.tab_list_RequestDecrease.\
+                        setItem(index, 1, QtWidgets.QTableWidgetItem(str(it['FTransactionType'])))
+                    self.ui.tab_list_RequestDecrease.\
+                        setItem(index, 2, QtWidgets.QTableWidgetItem(str(it['FValue'])))
+
+                    index += 1
+            except Exception as ex:
+                msg = f"Исключение вызвало: {ex}"
+                print(msg)
+                ret_value['DESC'] = msg
+                ret_value['RESULT'] = False
+
+            self.ui.tab_list_RequestDecrease.resizeColumnsToContents()
+
+        return ret_value
+
+    def request_decrease(self):
+        """ Функция запрашивает список транзакций на сотрудника """
+        guid = self.ui.guid_RequestDecrease.text()
+        data_from = self.ui.data_from_RequestDecrease.text()
+        data_to = self.ui.data_to_RequestDecrease.text()
+
+        result = self.request_api.request_decrease(guid, data_from, data_to)
+
+        tab_res = self.__request_decrease(result.get('DATA'))
+
+        if tab_res['RESULT']:
+            self.ui.browser_RequestDecrease.setText(str(json.dumps(result, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
+        else:
+            self.ui.browser_RequestDecrease.setText(str(json.dumps(tab_res, sort_keys=True,
+                                                                             indent=4, ensure_ascii=False)))
 
     # STEP 2
     def do_request_create_car_holder(self):

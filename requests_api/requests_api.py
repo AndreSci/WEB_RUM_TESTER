@@ -256,6 +256,74 @@ class TestRequestRum:
 
         return ret_value
 
+    # done
+    def set_auto_balance(self, guid, units) -> dict:
+        """ Получить информацию о сотруднике """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/SetAutoBalance?guid={guid}&units={units}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    # done
+    def request_transaction(self, guid, data_from, data_to) -> dict:
+        """ Получить историю транзакция за период """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/RequestTransaction?" \
+              f"guid={guid}&data_from={data_from}&data_to={data_to}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
+    # done
+    def request_decrease(self, guid, data_from, data_to) -> dict:
+        """ Получить историю транзакция за период """
+
+        ret_value = {"RESULT": 'ERROR', "DESC": '', 'DATA': None}
+
+        url = f"http://{self.host}:{self.port}/RequestDecrease?" \
+              f"guid={guid}&data_from={data_from}&data_to={data_to}"
+
+        try:
+            result = requests.get(url, timeout=5)
+
+            if result.status_code == 200:
+                ret_value = result.json()
+                ret_value['HEADER'] = dict(result.headers)
+            else:
+                ret_value['DESC'] = f"Статус код: {result.status_code}"
+
+        except Exception as ex:
+            ret_value['DESC'] = f"Исключение при обращении к серверу: {ex}"
+
+        return ret_value
+
     # ФАЗА 2
 
     # done
